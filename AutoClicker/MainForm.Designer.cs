@@ -44,7 +44,12 @@
             this.minutes_textBox = new System.Windows.Forms.TextBox();
             this.hours_label = new System.Windows.Forms.Label();
             this.hours_textBox = new System.Windows.Forms.TextBox();
+            this.start_button = new System.Windows.Forms.Button();
+            this.clickOptions_groupBox = new System.Windows.Forms.GroupBox();
+            this.mouseBtn_comboBox = new System.Windows.Forms.ComboBox();
+            this.mouseBtn_label = new System.Windows.Forms.Label();
             this.clickInterval_groupBox.SuspendLayout();
+            this.clickOptions_groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // clickInterval_groupBox
@@ -208,11 +213,55 @@
             this.hours_textBox.TabIndex = 1;
             this.hours_textBox.Text = "0";
             // 
+            // start_button
+            // 
+            this.start_button.Location = new System.Drawing.Point(713, 415);
+            this.start_button.Name = "start_button";
+            this.start_button.Size = new System.Drawing.Size(75, 23);
+            this.start_button.TabIndex = 1;
+            this.start_button.Text = "Start";
+            this.start_button.UseVisualStyleBackColor = true;
+            // 
+            // clickOptions_groupBox
+            // 
+            this.clickOptions_groupBox.Controls.Add(this.mouseBtn_label);
+            this.clickOptions_groupBox.Controls.Add(this.mouseBtn_comboBox);
+            this.clickOptions_groupBox.Location = new System.Drawing.Point(317, 12);
+            this.clickOptions_groupBox.Name = "clickOptions_groupBox";
+            this.clickOptions_groupBox.Size = new System.Drawing.Size(200, 100);
+            this.clickOptions_groupBox.TabIndex = 2;
+            this.clickOptions_groupBox.TabStop = false;
+            this.clickOptions_groupBox.Text = "Click Options";
+            // 
+            // mouseBtn_comboBox
+            // 
+            this.mouseBtn_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.mouseBtn_comboBox.FormattingEnabled = true;
+            this.mouseBtn_comboBox.Items.AddRange(new object[] {
+            "Left",
+            "Right",
+            "Middle"});
+            this.mouseBtn_comboBox.Location = new System.Drawing.Point(110, 27);
+            this.mouseBtn_comboBox.Name = "mouseBtn_comboBox";
+            this.mouseBtn_comboBox.Size = new System.Drawing.Size(84, 21);
+            this.mouseBtn_comboBox.TabIndex = 0;
+            // 
+            // mouseBtn_label
+            // 
+            this.mouseBtn_label.AutoSize = true;
+            this.mouseBtn_label.Location = new System.Drawing.Point(6, 30);
+            this.mouseBtn_label.Name = "mouseBtn_label";
+            this.mouseBtn_label.Size = new System.Drawing.Size(76, 13);
+            this.mouseBtn_label.TabIndex = 1;
+            this.mouseBtn_label.Text = "Mouse Button:";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.clickOptions_groupBox);
+            this.Controls.Add(this.start_button);
             this.Controls.Add(this.clickInterval_groupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -220,6 +269,8 @@
             this.Text = "AutoClicker";
             this.clickInterval_groupBox.ResumeLayout(false);
             this.clickInterval_groupBox.PerformLayout();
+            this.clickOptions_groupBox.ResumeLayout(false);
+            this.clickOptions_groupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -242,6 +293,10 @@
         private System.Windows.Forms.TextBox end_textBox;
         private System.Windows.Forms.RadioButton setTimeRand_radioButton;
         private System.Windows.Forms.RadioButton setTimeDefault_radioButton;
+        private System.Windows.Forms.Button start_button;
+        private System.Windows.Forms.GroupBox clickOptions_groupBox;
+        private System.Windows.Forms.ComboBox mouseBtn_comboBox;
+        private System.Windows.Forms.Label mouseBtn_label;
     }
 }
 
