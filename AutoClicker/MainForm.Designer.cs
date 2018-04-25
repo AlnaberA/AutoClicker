@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.clickInterval_groupBox = new System.Windows.Forms.GroupBox();
-            this.hours_label = new System.Windows.Forms.Label();
-            this.hours_textBox = new System.Windows.Forms.TextBox();
-            this.minutes_label = new System.Windows.Forms.Label();
-            this.minutes_textBox = new System.Windows.Forms.TextBox();
-            this.seconds_label = new System.Windows.Forms.Label();
-            this.seconds_textBox = new System.Windows.Forms.TextBox();
-            this.milliseconds_label = new System.Windows.Forms.Label();
-            this.milliseconds_textBox = new System.Windows.Forms.TextBox();
+            this.setTimeRand_radioButton = new System.Windows.Forms.RadioButton();
+            this.setTimeDefault_radioButton = new System.Windows.Forms.RadioButton();
+            this.end_label = new System.Windows.Forms.Label();
+            this.start_label = new System.Windows.Forms.Label();
+            this.end_textBox = new System.Windows.Forms.TextBox();
             this.range_label = new System.Windows.Forms.Label();
             this.start_textBox = new System.Windows.Forms.TextBox();
-            this.end_textBox = new System.Windows.Forms.TextBox();
-            this.start_label = new System.Windows.Forms.Label();
-            this.end_label = new System.Windows.Forms.Label();
-            this.setTimeDefault_radioButton = new System.Windows.Forms.RadioButton();
-            this.setTimeRand_radioButton = new System.Windows.Forms.RadioButton();
+            this.milliseconds_label = new System.Windows.Forms.Label();
+            this.milliseconds_textBox = new System.Windows.Forms.TextBox();
+            this.seconds_label = new System.Windows.Forms.Label();
+            this.seconds_textBox = new System.Windows.Forms.TextBox();
+            this.minutes_label = new System.Windows.Forms.Label();
+            this.minutes_textBox = new System.Windows.Forms.TextBox();
+            this.hours_label = new System.Windows.Forms.Label();
+            this.hours_textBox = new System.Windows.Forms.TextBox();
             this.clickInterval_groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,80 +64,63 @@
             this.clickInterval_groupBox.Controls.Add(this.minutes_textBox);
             this.clickInterval_groupBox.Controls.Add(this.hours_label);
             this.clickInterval_groupBox.Controls.Add(this.hours_textBox);
-            this.clickInterval_groupBox.Location = new System.Drawing.Point(12, 104);
+            this.clickInterval_groupBox.Location = new System.Drawing.Point(12, 12);
             this.clickInterval_groupBox.Name = "clickInterval_groupBox";
-            this.clickInterval_groupBox.Size = new System.Drawing.Size(311, 263);
+            this.clickInterval_groupBox.Size = new System.Drawing.Size(299, 239);
             this.clickInterval_groupBox.TabIndex = 0;
             this.clickInterval_groupBox.TabStop = false;
             this.clickInterval_groupBox.Text = "Click Interval";
             // 
-            // hours_label
+            // setTimeRand_radioButton
             // 
-            this.hours_label.AutoSize = true;
-            this.hours_label.Location = new System.Drawing.Point(68, 51);
-            this.hours_label.Name = "hours_label";
-            this.hours_label.Size = new System.Drawing.Size(33, 13);
-            this.hours_label.TabIndex = 2;
-            this.hours_label.Text = "hours";
+            this.setTimeRand_radioButton.AutoSize = true;
+            this.setTimeRand_radioButton.Location = new System.Drawing.Point(39, 188);
+            this.setTimeRand_radioButton.Name = "setTimeRand_radioButton";
+            this.setTimeRand_radioButton.Size = new System.Drawing.Size(116, 17);
+            this.setTimeRand_radioButton.TabIndex = 15;
+            this.setTimeRand_radioButton.Text = "Set Time(Random):";
+            this.setTimeRand_radioButton.UseVisualStyleBackColor = true;
+            this.setTimeRand_radioButton.CheckedChanged += new System.EventHandler(this.setTimeRand_radioButton_CheckedChanged);
             // 
-            // hours_textBox
+            // setTimeDefault_radioButton
             // 
-            this.hours_textBox.Location = new System.Drawing.Point(178, 51);
-            this.hours_textBox.Name = "hours_textBox";
-            this.hours_textBox.Size = new System.Drawing.Size(45, 20);
-            this.hours_textBox.TabIndex = 1;
-            this.hours_textBox.Text = "0";
+            this.setTimeDefault_radioButton.AutoSize = true;
+            this.setTimeDefault_radioButton.Checked = true;
+            this.setTimeDefault_radioButton.Location = new System.Drawing.Point(39, 31);
+            this.setTimeDefault_radioButton.Name = "setTimeDefault_radioButton";
+            this.setTimeDefault_radioButton.Size = new System.Drawing.Size(110, 17);
+            this.setTimeDefault_radioButton.TabIndex = 14;
+            this.setTimeDefault_radioButton.TabStop = true;
+            this.setTimeDefault_radioButton.Text = "Set Time(Default):";
+            this.setTimeDefault_radioButton.UseVisualStyleBackColor = true;
+            this.setTimeDefault_radioButton.CheckedChanged += new System.EventHandler(this.setTimeDefault_radioButton_CheckedChanged);
             // 
-            // minutes_label
+            // end_label
             // 
-            this.minutes_label.AutoSize = true;
-            this.minutes_label.Location = new System.Drawing.Point(68, 77);
-            this.minutes_label.Name = "minutes_label";
-            this.minutes_label.Size = new System.Drawing.Size(43, 13);
-            this.minutes_label.TabIndex = 4;
-            this.minutes_label.Text = "minutes";
+            this.end_label.AutoSize = true;
+            this.end_label.Location = new System.Drawing.Point(239, 192);
+            this.end_label.Name = "end_label";
+            this.end_label.Size = new System.Drawing.Size(29, 13);
+            this.end_label.TabIndex = 13;
+            this.end_label.Text = "End:";
             // 
-            // minutes_textBox
+            // start_label
             // 
-            this.minutes_textBox.Location = new System.Drawing.Point(178, 77);
-            this.minutes_textBox.Name = "minutes_textBox";
-            this.minutes_textBox.Size = new System.Drawing.Size(45, 20);
-            this.minutes_textBox.TabIndex = 3;
-            this.minutes_textBox.Text = "0";
+            this.start_label.AutoSize = true;
+            this.start_label.Location = new System.Drawing.Point(175, 192);
+            this.start_label.Name = "start_label";
+            this.start_label.Size = new System.Drawing.Size(32, 13);
+            this.start_label.TabIndex = 12;
+            this.start_label.Text = "Start:";
             // 
-            // seconds_label
+            // end_textBox
             // 
-            this.seconds_label.AutoSize = true;
-            this.seconds_label.Location = new System.Drawing.Point(68, 103);
-            this.seconds_label.Name = "seconds_label";
-            this.seconds_label.Size = new System.Drawing.Size(47, 13);
-            this.seconds_label.TabIndex = 6;
-            this.seconds_label.Text = "seconds";
-            // 
-            // seconds_textBox
-            // 
-            this.seconds_textBox.Location = new System.Drawing.Point(178, 103);
-            this.seconds_textBox.Name = "seconds_textBox";
-            this.seconds_textBox.Size = new System.Drawing.Size(45, 20);
-            this.seconds_textBox.TabIndex = 5;
-            this.seconds_textBox.Text = "0";
-            // 
-            // milliseconds_label
-            // 
-            this.milliseconds_label.AutoSize = true;
-            this.milliseconds_label.Location = new System.Drawing.Point(68, 129);
-            this.milliseconds_label.Name = "milliseconds_label";
-            this.milliseconds_label.Size = new System.Drawing.Size(63, 13);
-            this.milliseconds_label.TabIndex = 8;
-            this.milliseconds_label.Text = "milliseconds";
-            // 
-            // milliseconds_textBox
-            // 
-            this.milliseconds_textBox.Location = new System.Drawing.Point(178, 129);
-            this.milliseconds_textBox.Name = "milliseconds_textBox";
-            this.milliseconds_textBox.Size = new System.Drawing.Size(45, 20);
-            this.milliseconds_textBox.TabIndex = 7;
-            this.milliseconds_textBox.Text = "0";
+            this.end_textBox.Enabled = false;
+            this.end_textBox.Location = new System.Drawing.Point(242, 208);
+            this.end_textBox.Name = "end_textBox";
+            this.end_textBox.Size = new System.Drawing.Size(45, 20);
+            this.end_textBox.TabIndex = 11;
+            this.end_textBox.Text = "0";
             // 
             // range_label
             // 
@@ -157,56 +140,73 @@
             this.start_textBox.TabIndex = 9;
             this.start_textBox.Text = "0";
             // 
-            // end_textBox
+            // milliseconds_label
             // 
-            this.end_textBox.Enabled = false;
-            this.end_textBox.Location = new System.Drawing.Point(242, 208);
-            this.end_textBox.Name = "end_textBox";
-            this.end_textBox.Size = new System.Drawing.Size(45, 20);
-            this.end_textBox.TabIndex = 11;
-            this.end_textBox.Text = "0";
+            this.milliseconds_label.AutoSize = true;
+            this.milliseconds_label.Location = new System.Drawing.Point(68, 129);
+            this.milliseconds_label.Name = "milliseconds_label";
+            this.milliseconds_label.Size = new System.Drawing.Size(63, 13);
+            this.milliseconds_label.TabIndex = 8;
+            this.milliseconds_label.Text = "milliseconds";
             // 
-            // start_label
+            // milliseconds_textBox
             // 
-            this.start_label.AutoSize = true;
-            this.start_label.Location = new System.Drawing.Point(175, 192);
-            this.start_label.Name = "start_label";
-            this.start_label.Size = new System.Drawing.Size(32, 13);
-            this.start_label.TabIndex = 12;
-            this.start_label.Text = "Start:";
+            this.milliseconds_textBox.Location = new System.Drawing.Point(178, 129);
+            this.milliseconds_textBox.Name = "milliseconds_textBox";
+            this.milliseconds_textBox.Size = new System.Drawing.Size(45, 20);
+            this.milliseconds_textBox.TabIndex = 7;
+            this.milliseconds_textBox.Text = "0";
             // 
-            // end_label
+            // seconds_label
             // 
-            this.end_label.AutoSize = true;
-            this.end_label.Location = new System.Drawing.Point(239, 192);
-            this.end_label.Name = "end_label";
-            this.end_label.Size = new System.Drawing.Size(29, 13);
-            this.end_label.TabIndex = 13;
-            this.end_label.Text = "End:";
+            this.seconds_label.AutoSize = true;
+            this.seconds_label.Location = new System.Drawing.Point(68, 103);
+            this.seconds_label.Name = "seconds_label";
+            this.seconds_label.Size = new System.Drawing.Size(47, 13);
+            this.seconds_label.TabIndex = 6;
+            this.seconds_label.Text = "seconds";
             // 
-            // setTimeDefault_radioButton
+            // seconds_textBox
             // 
-            this.setTimeDefault_radioButton.AutoSize = true;
-            this.setTimeDefault_radioButton.Checked = true;
-            this.setTimeDefault_radioButton.Location = new System.Drawing.Point(39, 31);
-            this.setTimeDefault_radioButton.Name = "setTimeDefault_radioButton";
-            this.setTimeDefault_radioButton.Size = new System.Drawing.Size(110, 17);
-            this.setTimeDefault_radioButton.TabIndex = 14;
-            this.setTimeDefault_radioButton.TabStop = true;
-            this.setTimeDefault_radioButton.Text = "Set Time(Default):";
-            this.setTimeDefault_radioButton.UseVisualStyleBackColor = true;
-            this.setTimeDefault_radioButton.CheckedChanged += new System.EventHandler(this.setTimeDefault_radioButton_CheckedChanged);
+            this.seconds_textBox.Location = new System.Drawing.Point(178, 103);
+            this.seconds_textBox.Name = "seconds_textBox";
+            this.seconds_textBox.Size = new System.Drawing.Size(45, 20);
+            this.seconds_textBox.TabIndex = 5;
+            this.seconds_textBox.Text = "0";
             // 
-            // setTimeRand_radioButton
+            // minutes_label
             // 
-            this.setTimeRand_radioButton.AutoSize = true;
-            this.setTimeRand_radioButton.Location = new System.Drawing.Point(39, 188);
-            this.setTimeRand_radioButton.Name = "setTimeRand_radioButton";
-            this.setTimeRand_radioButton.Size = new System.Drawing.Size(116, 17);
-            this.setTimeRand_radioButton.TabIndex = 15;
-            this.setTimeRand_radioButton.Text = "Set Time(Random):";
-            this.setTimeRand_radioButton.UseVisualStyleBackColor = true;
-            this.setTimeRand_radioButton.CheckedChanged += new System.EventHandler(this.setTimeRand_radioButton_CheckedChanged);
+            this.minutes_label.AutoSize = true;
+            this.minutes_label.Location = new System.Drawing.Point(68, 77);
+            this.minutes_label.Name = "minutes_label";
+            this.minutes_label.Size = new System.Drawing.Size(43, 13);
+            this.minutes_label.TabIndex = 4;
+            this.minutes_label.Text = "minutes";
+            // 
+            // minutes_textBox
+            // 
+            this.minutes_textBox.Location = new System.Drawing.Point(178, 77);
+            this.minutes_textBox.Name = "minutes_textBox";
+            this.minutes_textBox.Size = new System.Drawing.Size(45, 20);
+            this.minutes_textBox.TabIndex = 3;
+            this.minutes_textBox.Text = "0";
+            // 
+            // hours_label
+            // 
+            this.hours_label.AutoSize = true;
+            this.hours_label.Location = new System.Drawing.Point(68, 51);
+            this.hours_label.Name = "hours_label";
+            this.hours_label.Size = new System.Drawing.Size(33, 13);
+            this.hours_label.TabIndex = 2;
+            this.hours_label.Text = "hours";
+            // 
+            // hours_textBox
+            // 
+            this.hours_textBox.Location = new System.Drawing.Point(178, 51);
+            this.hours_textBox.Name = "hours_textBox";
+            this.hours_textBox.Size = new System.Drawing.Size(45, 20);
+            this.hours_textBox.TabIndex = 1;
+            this.hours_textBox.Text = "0";
             // 
             // MainForm
             // 
