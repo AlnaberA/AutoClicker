@@ -144,9 +144,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(36, 208);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 10;
-            this.label5.Text = "label5";
+            this.label5.Text = "Range:";
             // 
             // textBox4
             // 
@@ -187,10 +187,10 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(39, 31);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
+            this.radioButton1.Size = new System.Drawing.Size(110, 17);
             this.radioButton1.TabIndex = 14;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.Text = "Set Time(Default):";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // radioButton2
@@ -198,10 +198,10 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(39, 188);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 17);
+            this.radioButton2.Size = new System.Drawing.Size(116, 17);
             this.radioButton2.TabIndex = 15;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
+            this.radioButton2.Text = "Set Time(Random):";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // MainForm
