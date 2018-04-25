@@ -16,5 +16,6 @@ namespace AutoClicker
         {
             InitializeComponent();
         }
+
     }
 }
