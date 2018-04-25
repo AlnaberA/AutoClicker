@@ -150,6 +150,7 @@
             // 
             // start_textBox
             // 
+            this.start_textBox.Enabled = false;
             this.start_textBox.Location = new System.Drawing.Point(178, 208);
             this.start_textBox.Name = "start_textBox";
             this.start_textBox.Size = new System.Drawing.Size(45, 20);
@@ -158,6 +159,7 @@
             // 
             // end_textBox
             // 
+            this.end_textBox.Enabled = false;
             this.end_textBox.Location = new System.Drawing.Point(242, 208);
             this.end_textBox.Name = "end_textBox";
             this.end_textBox.Size = new System.Drawing.Size(45, 20);
@@ -202,9 +204,9 @@
             this.setTimeRand_radioButton.Name = "setTimeRand_radioButton";
             this.setTimeRand_radioButton.Size = new System.Drawing.Size(116, 17);
             this.setTimeRand_radioButton.TabIndex = 15;
-            this.setTimeRand_radioButton.TabStop = true;
             this.setTimeRand_radioButton.Text = "Set Time(Random):";
             this.setTimeRand_radioButton.UseVisualStyleBackColor = true;
+            this.setTimeRand_radioButton.CheckedChanged += new System.EventHandler(this.setTimeRand_radioButton_CheckedChanged);
             // 
             // MainForm
             // 

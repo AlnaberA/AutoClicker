@@ -19,7 +19,7 @@ namespace AutoClicker
 
         private void setTimeDefault_radioButton_CheckedChanged(object sender, EventArgs e)
         {
-            if (setTimeDefault_radioButton.Checked == true)
+            if (setTimeDefault_radioButton.Enabled == true)
             {
                 start_textBox.Enabled = false;
                 end_textBox.Enabled = false;
@@ -27,6 +27,19 @@ namespace AutoClicker
                 minutes_textBox.Enabled = true;
                 seconds_textBox.Enabled = true;
                 milliseconds_textBox.Enabled = true;
+            }
+        }
+
+        private void setTimeRand_radioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (setTimeRand_radioButton.Enabled == true)
+            {
+                start_textBox.Enabled = true;
+                end_textBox.Enabled = true;
+                hours_textBox.Enabled = false;
+                minutes_textBox.Enabled = false;
+                seconds_textBox.Enabled = false;
+                milliseconds_textBox.Enabled = false;
             }
         }
     }
