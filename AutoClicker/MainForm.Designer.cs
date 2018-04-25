@@ -185,6 +185,7 @@
             // setTimeDefault_radioButton
             // 
             this.setTimeDefault_radioButton.AutoSize = true;
+            this.setTimeDefault_radioButton.Checked = true;
             this.setTimeDefault_radioButton.Location = new System.Drawing.Point(39, 31);
             this.setTimeDefault_radioButton.Name = "setTimeDefault_radioButton";
             this.setTimeDefault_radioButton.Size = new System.Drawing.Size(110, 17);
