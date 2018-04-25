@@ -17,5 +17,17 @@ namespace AutoClicker
             InitializeComponent();
         }
 
+        private void setTimeDefault_radioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (setTimeDefault_radioButton.Checked == true)
+            {
+                start_textBox.Enabled = false;
+                end_textBox.Enabled = false;
+                hours_textBox.Enabled = true;
+                minutes_textBox.Enabled = true;
+                seconds_textBox.Enabled = true;
+                milliseconds_textBox.Enabled = true;
+            }
+        }
     }
 }

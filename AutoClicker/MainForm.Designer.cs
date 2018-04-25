@@ -193,6 +193,7 @@
             this.setTimeDefault_radioButton.TabStop = true;
             this.setTimeDefault_radioButton.Text = "Set Time(Default):";
             this.setTimeDefault_radioButton.UseVisualStyleBackColor = true;
+            this.setTimeDefault_radioButton.CheckedChanged += new System.EventHandler(this.setTimeDefault_radioButton_CheckedChanged);
             // 
             // setTimeRand_radioButton
             // 
