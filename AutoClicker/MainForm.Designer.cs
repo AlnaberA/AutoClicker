@@ -46,8 +46,9 @@
             this.hours_textBox = new System.Windows.Forms.TextBox();
             this.start_button = new System.Windows.Forms.Button();
             this.clickOptions_groupBox = new System.Windows.Forms.GroupBox();
-            this.mouseBtn_comboBox = new System.Windows.Forms.ComboBox();
             this.mouseBtn_label = new System.Windows.Forms.Label();
+            this.mouseBtn_comboBox = new System.Windows.Forms.ComboBox();
+            this.stop_button = new System.Windows.Forms.Button();
             this.clickInterval_groupBox.SuspendLayout();
             this.clickOptions_groupBox.SuspendLayout();
             this.SuspendLayout();
@@ -215,7 +216,7 @@
             // 
             // start_button
             // 
-            this.start_button.Location = new System.Drawing.Point(713, 415);
+            this.start_button.Location = new System.Drawing.Point(713, 389);
             this.start_button.Name = "start_button";
             this.start_button.Size = new System.Drawing.Size(75, 23);
             this.start_button.TabIndex = 1;
@@ -233,6 +234,15 @@
             this.clickOptions_groupBox.TabStop = false;
             this.clickOptions_groupBox.Text = "Click Options";
             // 
+            // mouseBtn_label
+            // 
+            this.mouseBtn_label.AutoSize = true;
+            this.mouseBtn_label.Location = new System.Drawing.Point(6, 30);
+            this.mouseBtn_label.Name = "mouseBtn_label";
+            this.mouseBtn_label.Size = new System.Drawing.Size(76, 13);
+            this.mouseBtn_label.TabIndex = 1;
+            this.mouseBtn_label.Text = "Mouse Button:";
+            // 
             // mouseBtn_comboBox
             // 
             this.mouseBtn_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -246,20 +256,21 @@
             this.mouseBtn_comboBox.Size = new System.Drawing.Size(84, 21);
             this.mouseBtn_comboBox.TabIndex = 0;
             // 
-            // mouseBtn_label
+            // stop_button
             // 
-            this.mouseBtn_label.AutoSize = true;
-            this.mouseBtn_label.Location = new System.Drawing.Point(6, 30);
-            this.mouseBtn_label.Name = "mouseBtn_label";
-            this.mouseBtn_label.Size = new System.Drawing.Size(76, 13);
-            this.mouseBtn_label.TabIndex = 1;
-            this.mouseBtn_label.Text = "Mouse Button:";
+            this.stop_button.Location = new System.Drawing.Point(713, 418);
+            this.stop_button.Name = "stop_button";
+            this.stop_button.Size = new System.Drawing.Size(75, 23);
+            this.stop_button.TabIndex = 3;
+            this.stop_button.Text = "Stop";
+            this.stop_button.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.stop_button);
             this.Controls.Add(this.clickOptions_groupBox);
             this.Controls.Add(this.start_button);
             this.Controls.Add(this.clickInterval_groupBox);
@@ -297,6 +308,7 @@
         private System.Windows.Forms.GroupBox clickOptions_groupBox;
         private System.Windows.Forms.ComboBox mouseBtn_comboBox;
         private System.Windows.Forms.Label mouseBtn_label;
+        private System.Windows.Forms.Button stop_button;
     }
 }
 
