@@ -15,8 +15,9 @@ namespace AutoClicker
         public MainForm()
         {
             InitializeComponent();
-            //Sets default select box item
+            //Sets default select box items
             mouseBtn_comboBox.SelectedItem = "Left";
+            clickType_comboBox.SelectedItem = "Single";
         }
 
         private void setTimeDefault_radioButton_CheckedChanged(object sender, EventArgs e)
@@ -26,9 +27,6 @@ namespace AutoClicker
             {
                 start_textBox.Enabled = false;
                 end_textBox.Enabled = false;
-                hours_textBox.Enabled = true;
-                minutes_textBox.Enabled = true;
-                seconds_textBox.Enabled = true;
                 milliseconds_textBox.Enabled = true;
             }
         }
@@ -40,9 +38,6 @@ namespace AutoClicker
             {
                 start_textBox.Enabled = true;
                 end_textBox.Enabled = true;
-                hours_textBox.Enabled = false;
-                minutes_textBox.Enabled = false;
-                seconds_textBox.Enabled = false;
                 milliseconds_textBox.Enabled = false;
             }
         }
