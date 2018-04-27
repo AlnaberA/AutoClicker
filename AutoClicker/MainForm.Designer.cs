@@ -29,27 +29,25 @@
         private void InitializeComponent()
         {
             this.addEdit_groupBox = new System.Windows.Forms.GroupBox();
-            this.setTimeRand_radioButton = new System.Windows.Forms.RadioButton();
+            this.delay_groupBox = new System.Windows.Forms.GroupBox();
             this.setTimeDefault_radioButton = new System.Windows.Forms.RadioButton();
+            this.milliseconds_textBox = new System.Windows.Forms.TextBox();
+            this.setTimeRand_radioButton = new System.Windows.Forms.RadioButton();
+            this.milliseconds_label = new System.Windows.Forms.Label();
+            this.start_textBox = new System.Windows.Forms.TextBox();
             this.end_label = new System.Windows.Forms.Label();
+            this.range_label = new System.Windows.Forms.Label();
             this.start_label = new System.Windows.Forms.Label();
             this.end_textBox = new System.Windows.Forms.TextBox();
-            this.range_label = new System.Windows.Forms.Label();
-            this.start_textBox = new System.Windows.Forms.TextBox();
-            this.milliseconds_label = new System.Windows.Forms.Label();
-            this.milliseconds_textBox = new System.Windows.Forms.TextBox();
-            this.start_button = new System.Windows.Forms.Button();
-            this.clickOptions_groupBox = new System.Windows.Forms.GroupBox();
-            this.mouseBtn_label = new System.Windows.Forms.Label();
-            this.mouseBtn_comboBox = new System.Windows.Forms.ComboBox();
-            this.stop_button = new System.Windows.Forms.Button();
-            this.clickType_label = new System.Windows.Forms.Label();
-            this.clickType_comboBox = new System.Windows.Forms.ComboBox();
             this.add_button = new System.Windows.Forms.Button();
-            this.delay_groupBox = new System.Windows.Forms.GroupBox();
+            this.start_button = new System.Windows.Forms.Button();
+            this.stop_button = new System.Windows.Forms.Button();
+            this.mouseBtn_comboBox = new System.Windows.Forms.ComboBox();
+            this.mouseBtn_label = new System.Windows.Forms.Label();
+            this.clickOptions_groupBox = new System.Windows.Forms.GroupBox();
             this.addEdit_groupBox.SuspendLayout();
-            this.clickOptions_groupBox.SuspendLayout();
             this.delay_groupBox.SuspendLayout();
+            this.clickOptions_groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // addEdit_groupBox
@@ -63,175 +61,6 @@
             this.addEdit_groupBox.TabIndex = 0;
             this.addEdit_groupBox.TabStop = false;
             this.addEdit_groupBox.Text = "Add/Edit Mouse Click";
-            // 
-            // setTimeRand_radioButton
-            // 
-            this.setTimeRand_radioButton.AutoSize = true;
-            this.setTimeRand_radioButton.Location = new System.Drawing.Point(6, 65);
-            this.setTimeRand_radioButton.Name = "setTimeRand_radioButton";
-            this.setTimeRand_radioButton.Size = new System.Drawing.Size(116, 17);
-            this.setTimeRand_radioButton.TabIndex = 15;
-            this.setTimeRand_radioButton.Text = "Set Time(Random):";
-            this.setTimeRand_radioButton.UseVisualStyleBackColor = true;
-            this.setTimeRand_radioButton.CheckedChanged += new System.EventHandler(this.setTimeRand_radioButton_CheckedChanged);
-            // 
-            // setTimeDefault_radioButton
-            // 
-            this.setTimeDefault_radioButton.AutoSize = true;
-            this.setTimeDefault_radioButton.Checked = true;
-            this.setTimeDefault_radioButton.Location = new System.Drawing.Point(6, 19);
-            this.setTimeDefault_radioButton.Name = "setTimeDefault_radioButton";
-            this.setTimeDefault_radioButton.Size = new System.Drawing.Size(110, 17);
-            this.setTimeDefault_radioButton.TabIndex = 14;
-            this.setTimeDefault_radioButton.TabStop = true;
-            this.setTimeDefault_radioButton.Text = "Set Time(Default):";
-            this.setTimeDefault_radioButton.UseVisualStyleBackColor = true;
-            this.setTimeDefault_radioButton.CheckedChanged += new System.EventHandler(this.setTimeDefault_radioButton_CheckedChanged);
-            // 
-            // end_label
-            // 
-            this.end_label.AutoSize = true;
-            this.end_label.Location = new System.Drawing.Point(206, 69);
-            this.end_label.Name = "end_label";
-            this.end_label.Size = new System.Drawing.Size(29, 13);
-            this.end_label.TabIndex = 13;
-            this.end_label.Text = "End:";
-            // 
-            // start_label
-            // 
-            this.start_label.AutoSize = true;
-            this.start_label.Location = new System.Drawing.Point(142, 69);
-            this.start_label.Name = "start_label";
-            this.start_label.Size = new System.Drawing.Size(32, 13);
-            this.start_label.TabIndex = 12;
-            this.start_label.Text = "Start:";
-            // 
-            // end_textBox
-            // 
-            this.end_textBox.Enabled = false;
-            this.end_textBox.Location = new System.Drawing.Point(209, 85);
-            this.end_textBox.Name = "end_textBox";
-            this.end_textBox.Size = new System.Drawing.Size(45, 20);
-            this.end_textBox.TabIndex = 11;
-            this.end_textBox.Text = "0";
-            // 
-            // range_label
-            // 
-            this.range_label.AutoSize = true;
-            this.range_label.Location = new System.Drawing.Point(35, 88);
-            this.range_label.Name = "range_label";
-            this.range_label.Size = new System.Drawing.Size(107, 13);
-            this.range_label.TabIndex = 10;
-            this.range_label.Text = "Range(milliseconds) -";
-            // 
-            // start_textBox
-            // 
-            this.start_textBox.Enabled = false;
-            this.start_textBox.Location = new System.Drawing.Point(145, 85);
-            this.start_textBox.Name = "start_textBox";
-            this.start_textBox.Size = new System.Drawing.Size(45, 20);
-            this.start_textBox.TabIndex = 9;
-            this.start_textBox.Text = "0";
-            // 
-            // milliseconds_label
-            // 
-            this.milliseconds_label.AutoSize = true;
-            this.milliseconds_label.Location = new System.Drawing.Point(35, 39);
-            this.milliseconds_label.Name = "milliseconds_label";
-            this.milliseconds_label.Size = new System.Drawing.Size(63, 13);
-            this.milliseconds_label.TabIndex = 8;
-            this.milliseconds_label.Text = "milliseconds";
-            // 
-            // milliseconds_textBox
-            // 
-            this.milliseconds_textBox.Location = new System.Drawing.Point(145, 39);
-            this.milliseconds_textBox.Name = "milliseconds_textBox";
-            this.milliseconds_textBox.Size = new System.Drawing.Size(45, 20);
-            this.milliseconds_textBox.TabIndex = 7;
-            this.milliseconds_textBox.Text = "0";
-            // 
-            // start_button
-            // 
-            this.start_button.Location = new System.Drawing.Point(713, 389);
-            this.start_button.Name = "start_button";
-            this.start_button.Size = new System.Drawing.Size(75, 23);
-            this.start_button.TabIndex = 1;
-            this.start_button.Text = "Start";
-            this.start_button.UseVisualStyleBackColor = true;
-            // 
-            // clickOptions_groupBox
-            // 
-            this.clickOptions_groupBox.Controls.Add(this.clickType_comboBox);
-            this.clickOptions_groupBox.Controls.Add(this.clickType_label);
-            this.clickOptions_groupBox.Controls.Add(this.mouseBtn_label);
-            this.clickOptions_groupBox.Controls.Add(this.mouseBtn_comboBox);
-            this.clickOptions_groupBox.Location = new System.Drawing.Point(15, 148);
-            this.clickOptions_groupBox.Name = "clickOptions_groupBox";
-            this.clickOptions_groupBox.Size = new System.Drawing.Size(271, 100);
-            this.clickOptions_groupBox.TabIndex = 2;
-            this.clickOptions_groupBox.TabStop = false;
-            this.clickOptions_groupBox.Text = "Click Options";
-            // 
-            // mouseBtn_label
-            // 
-            this.mouseBtn_label.AutoSize = true;
-            this.mouseBtn_label.Location = new System.Drawing.Point(6, 27);
-            this.mouseBtn_label.Name = "mouseBtn_label";
-            this.mouseBtn_label.Size = new System.Drawing.Size(76, 13);
-            this.mouseBtn_label.TabIndex = 1;
-            this.mouseBtn_label.Text = "Mouse Button:";
-            // 
-            // mouseBtn_comboBox
-            // 
-            this.mouseBtn_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.mouseBtn_comboBox.FormattingEnabled = true;
-            this.mouseBtn_comboBox.Items.AddRange(new object[] {
-            "Left",
-            "Right",
-            "Middle"});
-            this.mouseBtn_comboBox.Location = new System.Drawing.Point(98, 24);
-            this.mouseBtn_comboBox.Name = "mouseBtn_comboBox";
-            this.mouseBtn_comboBox.Size = new System.Drawing.Size(84, 21);
-            this.mouseBtn_comboBox.TabIndex = 0;
-            // 
-            // stop_button
-            // 
-            this.stop_button.Location = new System.Drawing.Point(713, 418);
-            this.stop_button.Name = "stop_button";
-            this.stop_button.Size = new System.Drawing.Size(75, 23);
-            this.stop_button.TabIndex = 3;
-            this.stop_button.Text = "Stop";
-            this.stop_button.UseVisualStyleBackColor = true;
-            // 
-            // clickType_label
-            // 
-            this.clickType_label.AutoSize = true;
-            this.clickType_label.Location = new System.Drawing.Point(6, 67);
-            this.clickType_label.Name = "clickType_label";
-            this.clickType_label.Size = new System.Drawing.Size(57, 13);
-            this.clickType_label.TabIndex = 2;
-            this.clickType_label.Text = "Click Type";
-            // 
-            // clickType_comboBox
-            // 
-            this.clickType_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.clickType_comboBox.FormattingEnabled = true;
-            this.clickType_comboBox.Items.AddRange(new object[] {
-            "Single",
-            "Double"});
-            this.clickType_comboBox.Location = new System.Drawing.Point(98, 67);
-            this.clickType_comboBox.Name = "clickType_comboBox";
-            this.clickType_comboBox.Size = new System.Drawing.Size(84, 21);
-            this.clickType_comboBox.TabIndex = 3;
-            // 
-            // add_button
-            // 
-            this.add_button.Location = new System.Drawing.Point(359, 397);
-            this.add_button.Name = "add_button";
-            this.add_button.Size = new System.Drawing.Size(75, 23);
-            this.add_button.TabIndex = 16;
-            this.add_button.Text = "Add";
-            this.add_button.UseVisualStyleBackColor = true;
             // 
             // delay_groupBox
             // 
@@ -251,6 +80,153 @@
             this.delay_groupBox.TabStop = false;
             this.delay_groupBox.Text = "Delay Before Click";
             // 
+            // setTimeDefault_radioButton
+            // 
+            this.setTimeDefault_radioButton.AutoSize = true;
+            this.setTimeDefault_radioButton.Checked = true;
+            this.setTimeDefault_radioButton.Location = new System.Drawing.Point(6, 19);
+            this.setTimeDefault_radioButton.Name = "setTimeDefault_radioButton";
+            this.setTimeDefault_radioButton.Size = new System.Drawing.Size(110, 17);
+            this.setTimeDefault_radioButton.TabIndex = 14;
+            this.setTimeDefault_radioButton.TabStop = true;
+            this.setTimeDefault_radioButton.Text = "Set Time(Default):";
+            this.setTimeDefault_radioButton.UseVisualStyleBackColor = true;
+            this.setTimeDefault_radioButton.CheckedChanged += new System.EventHandler(this.setTimeDefault_radioButton_CheckedChanged);
+            // 
+            // milliseconds_textBox
+            // 
+            this.milliseconds_textBox.Location = new System.Drawing.Point(145, 39);
+            this.milliseconds_textBox.Name = "milliseconds_textBox";
+            this.milliseconds_textBox.Size = new System.Drawing.Size(45, 20);
+            this.milliseconds_textBox.TabIndex = 7;
+            this.milliseconds_textBox.Text = "0";
+            // 
+            // setTimeRand_radioButton
+            // 
+            this.setTimeRand_radioButton.AutoSize = true;
+            this.setTimeRand_radioButton.Location = new System.Drawing.Point(6, 65);
+            this.setTimeRand_radioButton.Name = "setTimeRand_radioButton";
+            this.setTimeRand_radioButton.Size = new System.Drawing.Size(116, 17);
+            this.setTimeRand_radioButton.TabIndex = 15;
+            this.setTimeRand_radioButton.Text = "Set Time(Random):";
+            this.setTimeRand_radioButton.UseVisualStyleBackColor = true;
+            this.setTimeRand_radioButton.CheckedChanged += new System.EventHandler(this.setTimeRand_radioButton_CheckedChanged);
+            // 
+            // milliseconds_label
+            // 
+            this.milliseconds_label.AutoSize = true;
+            this.milliseconds_label.Location = new System.Drawing.Point(35, 39);
+            this.milliseconds_label.Name = "milliseconds_label";
+            this.milliseconds_label.Size = new System.Drawing.Size(63, 13);
+            this.milliseconds_label.TabIndex = 8;
+            this.milliseconds_label.Text = "milliseconds";
+            // 
+            // start_textBox
+            // 
+            this.start_textBox.Enabled = false;
+            this.start_textBox.Location = new System.Drawing.Point(145, 85);
+            this.start_textBox.Name = "start_textBox";
+            this.start_textBox.Size = new System.Drawing.Size(45, 20);
+            this.start_textBox.TabIndex = 9;
+            this.start_textBox.Text = "0";
+            // 
+            // end_label
+            // 
+            this.end_label.AutoSize = true;
+            this.end_label.Location = new System.Drawing.Point(206, 69);
+            this.end_label.Name = "end_label";
+            this.end_label.Size = new System.Drawing.Size(29, 13);
+            this.end_label.TabIndex = 13;
+            this.end_label.Text = "End:";
+            // 
+            // range_label
+            // 
+            this.range_label.AutoSize = true;
+            this.range_label.Location = new System.Drawing.Point(35, 88);
+            this.range_label.Name = "range_label";
+            this.range_label.Size = new System.Drawing.Size(107, 13);
+            this.range_label.TabIndex = 10;
+            this.range_label.Text = "Range(milliseconds) -";
+            // 
+            // start_label
+            // 
+            this.start_label.AutoSize = true;
+            this.start_label.Location = new System.Drawing.Point(142, 69);
+            this.start_label.Name = "start_label";
+            this.start_label.Size = new System.Drawing.Size(32, 13);
+            this.start_label.TabIndex = 12;
+            this.start_label.Text = "Start:";
+            // 
+            // end_textBox
+            // 
+            this.end_textBox.Enabled = false;
+            this.end_textBox.Location = new System.Drawing.Point(209, 85);
+            this.end_textBox.Name = "end_textBox";
+            this.end_textBox.Size = new System.Drawing.Size(45, 20);
+            this.end_textBox.TabIndex = 11;
+            this.end_textBox.Text = "0";
+            // 
+            // add_button
+            // 
+            this.add_button.Location = new System.Drawing.Point(359, 397);
+            this.add_button.Name = "add_button";
+            this.add_button.Size = new System.Drawing.Size(75, 23);
+            this.add_button.TabIndex = 16;
+            this.add_button.Text = "Add";
+            this.add_button.UseVisualStyleBackColor = true;
+            // 
+            // start_button
+            // 
+            this.start_button.Location = new System.Drawing.Point(713, 389);
+            this.start_button.Name = "start_button";
+            this.start_button.Size = new System.Drawing.Size(75, 23);
+            this.start_button.TabIndex = 1;
+            this.start_button.Text = "Start";
+            this.start_button.UseVisualStyleBackColor = true;
+            // 
+            // stop_button
+            // 
+            this.stop_button.Location = new System.Drawing.Point(713, 418);
+            this.stop_button.Name = "stop_button";
+            this.stop_button.Size = new System.Drawing.Size(75, 23);
+            this.stop_button.TabIndex = 3;
+            this.stop_button.Text = "Stop";
+            this.stop_button.UseVisualStyleBackColor = true;
+            // 
+            // mouseBtn_comboBox
+            // 
+            this.mouseBtn_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.mouseBtn_comboBox.FormattingEnabled = true;
+            this.mouseBtn_comboBox.Items.AddRange(new object[] {
+            "Single Left Click",
+            "Single Right Click",
+            "Double Left Click",
+            "Double Right Click"});
+            this.mouseBtn_comboBox.Location = new System.Drawing.Point(98, 19);
+            this.mouseBtn_comboBox.Name = "mouseBtn_comboBox";
+            this.mouseBtn_comboBox.Size = new System.Drawing.Size(167, 21);
+            this.mouseBtn_comboBox.TabIndex = 0;
+            // 
+            // mouseBtn_label
+            // 
+            this.mouseBtn_label.AutoSize = true;
+            this.mouseBtn_label.Location = new System.Drawing.Point(6, 22);
+            this.mouseBtn_label.Name = "mouseBtn_label";
+            this.mouseBtn_label.Size = new System.Drawing.Size(76, 13);
+            this.mouseBtn_label.TabIndex = 1;
+            this.mouseBtn_label.Text = "Mouse Button:";
+            // 
+            // clickOptions_groupBox
+            // 
+            this.clickOptions_groupBox.Controls.Add(this.mouseBtn_label);
+            this.clickOptions_groupBox.Controls.Add(this.mouseBtn_comboBox);
+            this.clickOptions_groupBox.Location = new System.Drawing.Point(15, 148);
+            this.clickOptions_groupBox.Name = "clickOptions_groupBox";
+            this.clickOptions_groupBox.Size = new System.Drawing.Size(271, 60);
+            this.clickOptions_groupBox.TabIndex = 2;
+            this.clickOptions_groupBox.TabStop = false;
+            this.clickOptions_groupBox.Text = "Click Options";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,10 +240,10 @@
             this.Name = "MainForm";
             this.Text = "AutoClicker";
             this.addEdit_groupBox.ResumeLayout(false);
-            this.clickOptions_groupBox.ResumeLayout(false);
-            this.clickOptions_groupBox.PerformLayout();
             this.delay_groupBox.ResumeLayout(false);
             this.delay_groupBox.PerformLayout();
+            this.clickOptions_groupBox.ResumeLayout(false);
+            this.clickOptions_groupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -285,14 +261,12 @@
         private System.Windows.Forms.RadioButton setTimeRand_radioButton;
         private System.Windows.Forms.RadioButton setTimeDefault_radioButton;
         private System.Windows.Forms.Button start_button;
-        private System.Windows.Forms.GroupBox clickOptions_groupBox;
-        private System.Windows.Forms.ComboBox mouseBtn_comboBox;
-        private System.Windows.Forms.Label mouseBtn_label;
         private System.Windows.Forms.Button stop_button;
-        private System.Windows.Forms.ComboBox clickType_comboBox;
-        private System.Windows.Forms.Label clickType_label;
         private System.Windows.Forms.Button add_button;
         private System.Windows.Forms.GroupBox delay_groupBox;
+        private System.Windows.Forms.GroupBox clickOptions_groupBox;
+        private System.Windows.Forms.Label mouseBtn_label;
+        private System.Windows.Forms.ComboBox mouseBtn_comboBox;
     }
 }
 

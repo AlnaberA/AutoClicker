@@ -16,8 +16,7 @@ namespace AutoClicker
         {
             InitializeComponent();
             //Sets default select box items
-            mouseBtn_comboBox.SelectedItem = "Left";
-            clickType_comboBox.SelectedItem = "Single";
+            mouseBtn_comboBox.SelectedItem = "Single Left Click";
         }
 
         private void setTimeDefault_radioButton_CheckedChanged(object sender, EventArgs e)
