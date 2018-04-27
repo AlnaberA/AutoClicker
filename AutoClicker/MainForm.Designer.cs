@@ -45,13 +45,24 @@
             this.mouseBtn_comboBox = new System.Windows.Forms.ComboBox();
             this.mouseBtn_label = new System.Windows.Forms.Label();
             this.clickOptions_groupBox = new System.Windows.Forms.GroupBox();
+            this.repeatCount_textBox = new System.Windows.Forms.TextBox();
+            this.repeatCount_label = new System.Windows.Forms.Label();
+            this.x_label = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.y_label = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.XYPos_groupBox = new System.Windows.Forms.GroupBox();
             this.addEdit_groupBox.SuspendLayout();
             this.delay_groupBox.SuspendLayout();
             this.clickOptions_groupBox.SuspendLayout();
+            this.XYPos_groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // addEdit_groupBox
             // 
+            this.addEdit_groupBox.Controls.Add(this.XYPos_groupBox);
+            this.addEdit_groupBox.Controls.Add(this.repeatCount_label);
+            this.addEdit_groupBox.Controls.Add(this.repeatCount_textBox);
             this.addEdit_groupBox.Controls.Add(this.delay_groupBox);
             this.addEdit_groupBox.Controls.Add(this.add_button);
             this.addEdit_groupBox.Controls.Add(this.clickOptions_groupBox);
@@ -227,6 +238,70 @@
             this.clickOptions_groupBox.TabStop = false;
             this.clickOptions_groupBox.Text = "Click Options";
             // 
+            // repeatCount_textBox
+            // 
+            this.repeatCount_textBox.Location = new System.Drawing.Point(374, 26);
+            this.repeatCount_textBox.Name = "repeatCount_textBox";
+            this.repeatCount_textBox.Size = new System.Drawing.Size(45, 20);
+            this.repeatCount_textBox.TabIndex = 16;
+            this.repeatCount_textBox.Text = "0";
+            // 
+            // repeatCount_label
+            // 
+            this.repeatCount_label.AutoSize = true;
+            this.repeatCount_label.Location = new System.Drawing.Point(292, 29);
+            this.repeatCount_label.Name = "repeatCount_label";
+            this.repeatCount_label.Size = new System.Drawing.Size(76, 13);
+            this.repeatCount_label.TabIndex = 16;
+            this.repeatCount_label.Text = "Repeat Count:";
+            // 
+            // x_label
+            // 
+            this.x_label.AutoSize = true;
+            this.x_label.Location = new System.Drawing.Point(6, 26);
+            this.x_label.Name = "x_label";
+            this.x_label.Size = new System.Drawing.Size(38, 13);
+            this.x_label.TabIndex = 18;
+            this.x_label.Text = "X-Pos:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(50, 23);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(45, 20);
+            this.textBox1.TabIndex = 19;
+            this.textBox1.Text = "0";
+            // 
+            // y_label
+            // 
+            this.y_label.AutoSize = true;
+            this.y_label.Location = new System.Drawing.Point(6, 60);
+            this.y_label.Name = "y_label";
+            this.y_label.Size = new System.Drawing.Size(38, 13);
+            this.y_label.TabIndex = 20;
+            this.y_label.Text = "Y-Pos:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(50, 57);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(45, 20);
+            this.textBox2.TabIndex = 21;
+            this.textBox2.Text = "0";
+            // 
+            // XYPos_groupBox
+            // 
+            this.XYPos_groupBox.Controls.Add(this.y_label);
+            this.XYPos_groupBox.Controls.Add(this.textBox1);
+            this.XYPos_groupBox.Controls.Add(this.textBox2);
+            this.XYPos_groupBox.Controls.Add(this.x_label);
+            this.XYPos_groupBox.Location = new System.Drawing.Point(15, 214);
+            this.XYPos_groupBox.Name = "XYPos_groupBox";
+            this.XYPos_groupBox.Size = new System.Drawing.Size(271, 100);
+            this.XYPos_groupBox.TabIndex = 4;
+            this.XYPos_groupBox.TabStop = false;
+            this.XYPos_groupBox.Text = "XY-Position";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,10 +315,13 @@
             this.Name = "MainForm";
             this.Text = "AutoClicker";
             this.addEdit_groupBox.ResumeLayout(false);
+            this.addEdit_groupBox.PerformLayout();
             this.delay_groupBox.ResumeLayout(false);
             this.delay_groupBox.PerformLayout();
             this.clickOptions_groupBox.ResumeLayout(false);
             this.clickOptions_groupBox.PerformLayout();
+            this.XYPos_groupBox.ResumeLayout(false);
+            this.XYPos_groupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -267,6 +345,13 @@
         private System.Windows.Forms.GroupBox clickOptions_groupBox;
         private System.Windows.Forms.Label mouseBtn_label;
         private System.Windows.Forms.ComboBox mouseBtn_comboBox;
+        private System.Windows.Forms.Label repeatCount_label;
+        private System.Windows.Forms.TextBox repeatCount_textBox;
+        private System.Windows.Forms.GroupBox XYPos_groupBox;
+        private System.Windows.Forms.Label y_label;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label x_label;
     }
 }
 
