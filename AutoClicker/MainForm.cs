@@ -40,5 +40,26 @@ namespace AutoClicker
                 milliseconds_textBox.Enabled = false;
             }
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            this.KeyPreview = true;
+        }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            //ctrl+z runs this command
+            /*
+            if (e.Control == true && e.KeyCode == Keys.Z)
+            {
+                xPos_textBox.Text = "test";
+            }*/
+            if (e.KeyCode == Keys.Z)
+            {
+                xPos_textBox.Text = "test";
+            }
+            
+
+        }
     }
 }

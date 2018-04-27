@@ -48,9 +48,9 @@
             this.repeatCount_textBox = new System.Windows.Forms.TextBox();
             this.repeatCount_label = new System.Windows.Forms.Label();
             this.x_label = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.xPos_textBox = new System.Windows.Forms.TextBox();
             this.y_label = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.yPos_textBox = new System.Windows.Forms.TextBox();
             this.XYPos_groupBox = new System.Windows.Forms.GroupBox();
             this.addEdit_groupBox.SuspendLayout();
             this.delay_groupBox.SuspendLayout();
@@ -264,13 +264,13 @@
             this.x_label.TabIndex = 18;
             this.x_label.Text = "X-Pos:";
             // 
-            // textBox1
+            // xPos_textBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(50, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(45, 20);
-            this.textBox1.TabIndex = 19;
-            this.textBox1.Text = "0";
+            this.xPos_textBox.Location = new System.Drawing.Point(50, 23);
+            this.xPos_textBox.Name = "xPos_textBox";
+            this.xPos_textBox.Size = new System.Drawing.Size(45, 20);
+            this.xPos_textBox.TabIndex = 19;
+            this.xPos_textBox.Text = "0";
             // 
             // y_label
             // 
@@ -281,19 +281,19 @@
             this.y_label.TabIndex = 20;
             this.y_label.Text = "Y-Pos:";
             // 
-            // textBox2
+            // yPos_textBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(50, 57);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(45, 20);
-            this.textBox2.TabIndex = 21;
-            this.textBox2.Text = "0";
+            this.yPos_textBox.Location = new System.Drawing.Point(50, 57);
+            this.yPos_textBox.Name = "yPos_textBox";
+            this.yPos_textBox.Size = new System.Drawing.Size(45, 20);
+            this.yPos_textBox.TabIndex = 21;
+            this.yPos_textBox.Text = "0";
             // 
             // XYPos_groupBox
             // 
             this.XYPos_groupBox.Controls.Add(this.y_label);
-            this.XYPos_groupBox.Controls.Add(this.textBox1);
-            this.XYPos_groupBox.Controls.Add(this.textBox2);
+            this.XYPos_groupBox.Controls.Add(this.xPos_textBox);
+            this.XYPos_groupBox.Controls.Add(this.yPos_textBox);
             this.XYPos_groupBox.Controls.Add(this.x_label);
             this.XYPos_groupBox.Location = new System.Drawing.Point(15, 214);
             this.XYPos_groupBox.Name = "XYPos_groupBox";
@@ -314,6 +314,8 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "AutoClicker";
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.addEdit_groupBox.ResumeLayout(false);
             this.addEdit_groupBox.PerformLayout();
             this.delay_groupBox.ResumeLayout(false);
@@ -349,8 +351,8 @@
         private System.Windows.Forms.TextBox repeatCount_textBox;
         private System.Windows.Forms.GroupBox XYPos_groupBox;
         private System.Windows.Forms.Label y_label;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox xPos_textBox;
+        private System.Windows.Forms.TextBox yPos_textBox;
         private System.Windows.Forms.Label x_label;
     }
 }
