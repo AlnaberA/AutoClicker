@@ -49,11 +49,11 @@
             this.clickOptions_groupBox = new System.Windows.Forms.GroupBox();
             this.mouseBtn_label = new System.Windows.Forms.Label();
             this.mouseBtn_comboBox = new System.Windows.Forms.ComboBox();
-            this.run_button = new System.Windows.Forms.Button();
             this.repeatOption_groupBox = new System.Windows.Forms.GroupBox();
             this.repeatCount_radioButton = new System.Windows.Forms.RadioButton();
             this.keyPressStop_radioButton = new System.Windows.Forms.RadioButton();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.run_button = new System.Windows.Forms.Button();
             this.addEdit_groupBox.SuspendLayout();
             this.XYPos_groupBox.SuspendLayout();
             this.delay_groupBox.SuspendLayout();
@@ -278,15 +278,6 @@
             this.mouseBtn_comboBox.Size = new System.Drawing.Size(167, 21);
             this.mouseBtn_comboBox.TabIndex = 0;
             // 
-            // run_button
-            // 
-            this.run_button.Location = new System.Drawing.Point(713, 415);
-            this.run_button.Name = "run_button";
-            this.run_button.Size = new System.Drawing.Size(75, 23);
-            this.run_button.TabIndex = 1;
-            this.run_button.Text = "RUN";
-            this.run_button.UseVisualStyleBackColor = true;
-            // 
             // repeatOption_groupBox
             // 
             this.repeatOption_groupBox.Controls.Add(this.keyPressStop_radioButton);
@@ -331,6 +322,17 @@
             this.richTextBox1.Size = new System.Drawing.Size(130, 51);
             this.richTextBox1.TabIndex = 22;
             this.richTextBox1.Text = "Press Z to get the current cursor position.";
+            // 
+            // run_button
+            // 
+            this.run_button.Image = global::AutoClicker.Properties.Resources.Play_icon1;
+            this.run_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.run_button.Location = new System.Drawing.Point(676, 395);
+            this.run_button.Name = "run_button";
+            this.run_button.Size = new System.Drawing.Size(112, 45);
+            this.run_button.TabIndex = 1;
+            this.run_button.Text = "Run";
+            this.run_button.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
