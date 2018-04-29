@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.addEdit_groupBox = new System.Windows.Forms.GroupBox();
+            this.XYPos_groupBox = new System.Windows.Forms.GroupBox();
+            this.y_label = new System.Windows.Forms.Label();
+            this.xPos_textBox = new System.Windows.Forms.TextBox();
+            this.yPos_textBox = new System.Windows.Forms.TextBox();
+            this.x_label = new System.Windows.Forms.Label();
+            this.repeatCount_textBox = new System.Windows.Forms.TextBox();
             this.delay_groupBox = new System.Windows.Forms.GroupBox();
             this.setTimeDefault_radioButton = new System.Windows.Forms.RadioButton();
             this.milliseconds_textBox = new System.Windows.Forms.TextBox();
@@ -40,29 +46,25 @@
             this.start_label = new System.Windows.Forms.Label();
             this.end_textBox = new System.Windows.Forms.TextBox();
             this.add_button = new System.Windows.Forms.Button();
+            this.clickOptions_groupBox = new System.Windows.Forms.GroupBox();
+            this.mouseBtn_label = new System.Windows.Forms.Label();
+            this.mouseBtn_comboBox = new System.Windows.Forms.ComboBox();
             this.start_button = new System.Windows.Forms.Button();
             this.stop_button = new System.Windows.Forms.Button();
-            this.mouseBtn_comboBox = new System.Windows.Forms.ComboBox();
-            this.mouseBtn_label = new System.Windows.Forms.Label();
-            this.clickOptions_groupBox = new System.Windows.Forms.GroupBox();
-            this.repeatCount_textBox = new System.Windows.Forms.TextBox();
-            this.repeatCount_label = new System.Windows.Forms.Label();
-            this.x_label = new System.Windows.Forms.Label();
-            this.xPos_textBox = new System.Windows.Forms.TextBox();
-            this.y_label = new System.Windows.Forms.Label();
-            this.yPos_textBox = new System.Windows.Forms.TextBox();
-            this.XYPos_groupBox = new System.Windows.Forms.GroupBox();
+            this.repeatOption_groupBox = new System.Windows.Forms.GroupBox();
+            this.repeatCount_radioButton = new System.Windows.Forms.RadioButton();
+            this.keyPressStop_radioButton = new System.Windows.Forms.RadioButton();
             this.addEdit_groupBox.SuspendLayout();
+            this.XYPos_groupBox.SuspendLayout();
             this.delay_groupBox.SuspendLayout();
             this.clickOptions_groupBox.SuspendLayout();
-            this.XYPos_groupBox.SuspendLayout();
+            this.repeatOption_groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // addEdit_groupBox
             // 
+            this.addEdit_groupBox.Controls.Add(this.repeatOption_groupBox);
             this.addEdit_groupBox.Controls.Add(this.XYPos_groupBox);
-            this.addEdit_groupBox.Controls.Add(this.repeatCount_label);
-            this.addEdit_groupBox.Controls.Add(this.repeatCount_textBox);
             this.addEdit_groupBox.Controls.Add(this.delay_groupBox);
             this.addEdit_groupBox.Controls.Add(this.add_button);
             this.addEdit_groupBox.Controls.Add(this.clickOptions_groupBox);
@@ -72,6 +74,61 @@
             this.addEdit_groupBox.TabIndex = 0;
             this.addEdit_groupBox.TabStop = false;
             this.addEdit_groupBox.Text = "Add/Edit Mouse Click";
+            // 
+            // XYPos_groupBox
+            // 
+            this.XYPos_groupBox.Controls.Add(this.y_label);
+            this.XYPos_groupBox.Controls.Add(this.xPos_textBox);
+            this.XYPos_groupBox.Controls.Add(this.yPos_textBox);
+            this.XYPos_groupBox.Controls.Add(this.x_label);
+            this.XYPos_groupBox.Location = new System.Drawing.Point(15, 214);
+            this.XYPos_groupBox.Name = "XYPos_groupBox";
+            this.XYPos_groupBox.Size = new System.Drawing.Size(271, 100);
+            this.XYPos_groupBox.TabIndex = 4;
+            this.XYPos_groupBox.TabStop = false;
+            this.XYPos_groupBox.Text = "XY-Position";
+            // 
+            // y_label
+            // 
+            this.y_label.AutoSize = true;
+            this.y_label.Location = new System.Drawing.Point(6, 60);
+            this.y_label.Name = "y_label";
+            this.y_label.Size = new System.Drawing.Size(38, 13);
+            this.y_label.TabIndex = 20;
+            this.y_label.Text = "Y-Pos:";
+            // 
+            // xPos_textBox
+            // 
+            this.xPos_textBox.Location = new System.Drawing.Point(50, 23);
+            this.xPos_textBox.Name = "xPos_textBox";
+            this.xPos_textBox.Size = new System.Drawing.Size(45, 20);
+            this.xPos_textBox.TabIndex = 19;
+            this.xPos_textBox.Text = "0";
+            // 
+            // yPos_textBox
+            // 
+            this.yPos_textBox.Location = new System.Drawing.Point(50, 57);
+            this.yPos_textBox.Name = "yPos_textBox";
+            this.yPos_textBox.Size = new System.Drawing.Size(45, 20);
+            this.yPos_textBox.TabIndex = 21;
+            this.yPos_textBox.Text = "0";
+            // 
+            // x_label
+            // 
+            this.x_label.AutoSize = true;
+            this.x_label.Location = new System.Drawing.Point(6, 26);
+            this.x_label.Name = "x_label";
+            this.x_label.Size = new System.Drawing.Size(38, 13);
+            this.x_label.TabIndex = 18;
+            this.x_label.Text = "X-Pos:";
+            // 
+            // repeatCount_textBox
+            // 
+            this.repeatCount_textBox.Location = new System.Drawing.Point(109, 28);
+            this.repeatCount_textBox.Name = "repeatCount_textBox";
+            this.repeatCount_textBox.Size = new System.Drawing.Size(60, 20);
+            this.repeatCount_textBox.TabIndex = 16;
+            this.repeatCount_textBox.Text = "0";
             // 
             // delay_groupBox
             // 
@@ -186,6 +243,40 @@
             this.add_button.Text = "Add";
             this.add_button.UseVisualStyleBackColor = true;
             // 
+            // clickOptions_groupBox
+            // 
+            this.clickOptions_groupBox.Controls.Add(this.mouseBtn_label);
+            this.clickOptions_groupBox.Controls.Add(this.mouseBtn_comboBox);
+            this.clickOptions_groupBox.Location = new System.Drawing.Point(15, 148);
+            this.clickOptions_groupBox.Name = "clickOptions_groupBox";
+            this.clickOptions_groupBox.Size = new System.Drawing.Size(271, 60);
+            this.clickOptions_groupBox.TabIndex = 2;
+            this.clickOptions_groupBox.TabStop = false;
+            this.clickOptions_groupBox.Text = "Click Options";
+            // 
+            // mouseBtn_label
+            // 
+            this.mouseBtn_label.AutoSize = true;
+            this.mouseBtn_label.Location = new System.Drawing.Point(6, 22);
+            this.mouseBtn_label.Name = "mouseBtn_label";
+            this.mouseBtn_label.Size = new System.Drawing.Size(76, 13);
+            this.mouseBtn_label.TabIndex = 1;
+            this.mouseBtn_label.Text = "Mouse Button:";
+            // 
+            // mouseBtn_comboBox
+            // 
+            this.mouseBtn_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.mouseBtn_comboBox.FormattingEnabled = true;
+            this.mouseBtn_comboBox.Items.AddRange(new object[] {
+            "Single Left Click",
+            "Single Right Click",
+            "Double Left Click",
+            "Double Right Click"});
+            this.mouseBtn_comboBox.Location = new System.Drawing.Point(98, 19);
+            this.mouseBtn_comboBox.Name = "mouseBtn_comboBox";
+            this.mouseBtn_comboBox.Size = new System.Drawing.Size(167, 21);
+            this.mouseBtn_comboBox.TabIndex = 0;
+            // 
             // start_button
             // 
             this.start_button.Location = new System.Drawing.Point(713, 389);
@@ -204,103 +295,39 @@
             this.stop_button.Text = "Stop";
             this.stop_button.UseVisualStyleBackColor = true;
             // 
-            // mouseBtn_comboBox
+            // repeatOption_groupBox
             // 
-            this.mouseBtn_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.mouseBtn_comboBox.FormattingEnabled = true;
-            this.mouseBtn_comboBox.Items.AddRange(new object[] {
-            "Single Left Click",
-            "Single Right Click",
-            "Double Left Click",
-            "Double Right Click"});
-            this.mouseBtn_comboBox.Location = new System.Drawing.Point(98, 19);
-            this.mouseBtn_comboBox.Name = "mouseBtn_comboBox";
-            this.mouseBtn_comboBox.Size = new System.Drawing.Size(167, 21);
-            this.mouseBtn_comboBox.TabIndex = 0;
+            this.repeatOption_groupBox.Controls.Add(this.keyPressStop_radioButton);
+            this.repeatOption_groupBox.Controls.Add(this.repeatCount_radioButton);
+            this.repeatOption_groupBox.Controls.Add(this.repeatCount_textBox);
+            this.repeatOption_groupBox.Location = new System.Drawing.Point(15, 320);
+            this.repeatOption_groupBox.Name = "repeatOption_groupBox";
+            this.repeatOption_groupBox.Size = new System.Drawing.Size(271, 100);
+            this.repeatOption_groupBox.TabIndex = 4;
+            this.repeatOption_groupBox.TabStop = false;
+            this.repeatOption_groupBox.Text = "Repeat Option";
             // 
-            // mouseBtn_label
+            // repeatCount_radioButton
             // 
-            this.mouseBtn_label.AutoSize = true;
-            this.mouseBtn_label.Location = new System.Drawing.Point(6, 22);
-            this.mouseBtn_label.Name = "mouseBtn_label";
-            this.mouseBtn_label.Size = new System.Drawing.Size(76, 13);
-            this.mouseBtn_label.TabIndex = 1;
-            this.mouseBtn_label.Text = "Mouse Button:";
+            this.repeatCount_radioButton.AutoSize = true;
+            this.repeatCount_radioButton.Location = new System.Drawing.Point(9, 28);
+            this.repeatCount_radioButton.Name = "repeatCount_radioButton";
+            this.repeatCount_radioButton.Size = new System.Drawing.Size(94, 17);
+            this.repeatCount_radioButton.TabIndex = 18;
+            this.repeatCount_radioButton.TabStop = true;
+            this.repeatCount_radioButton.Text = "Repeat Count:";
+            this.repeatCount_radioButton.UseVisualStyleBackColor = true;
             // 
-            // clickOptions_groupBox
+            // keyPressStop_radioButton
             // 
-            this.clickOptions_groupBox.Controls.Add(this.mouseBtn_label);
-            this.clickOptions_groupBox.Controls.Add(this.mouseBtn_comboBox);
-            this.clickOptions_groupBox.Location = new System.Drawing.Point(15, 148);
-            this.clickOptions_groupBox.Name = "clickOptions_groupBox";
-            this.clickOptions_groupBox.Size = new System.Drawing.Size(271, 60);
-            this.clickOptions_groupBox.TabIndex = 2;
-            this.clickOptions_groupBox.TabStop = false;
-            this.clickOptions_groupBox.Text = "Click Options";
-            // 
-            // repeatCount_textBox
-            // 
-            this.repeatCount_textBox.Location = new System.Drawing.Point(374, 26);
-            this.repeatCount_textBox.Name = "repeatCount_textBox";
-            this.repeatCount_textBox.Size = new System.Drawing.Size(45, 20);
-            this.repeatCount_textBox.TabIndex = 16;
-            this.repeatCount_textBox.Text = "0";
-            // 
-            // repeatCount_label
-            // 
-            this.repeatCount_label.AutoSize = true;
-            this.repeatCount_label.Location = new System.Drawing.Point(292, 29);
-            this.repeatCount_label.Name = "repeatCount_label";
-            this.repeatCount_label.Size = new System.Drawing.Size(76, 13);
-            this.repeatCount_label.TabIndex = 16;
-            this.repeatCount_label.Text = "Repeat Count:";
-            // 
-            // x_label
-            // 
-            this.x_label.AutoSize = true;
-            this.x_label.Location = new System.Drawing.Point(6, 26);
-            this.x_label.Name = "x_label";
-            this.x_label.Size = new System.Drawing.Size(38, 13);
-            this.x_label.TabIndex = 18;
-            this.x_label.Text = "X-Pos:";
-            // 
-            // xPos_textBox
-            // 
-            this.xPos_textBox.Location = new System.Drawing.Point(50, 23);
-            this.xPos_textBox.Name = "xPos_textBox";
-            this.xPos_textBox.Size = new System.Drawing.Size(45, 20);
-            this.xPos_textBox.TabIndex = 19;
-            this.xPos_textBox.Text = "0";
-            // 
-            // y_label
-            // 
-            this.y_label.AutoSize = true;
-            this.y_label.Location = new System.Drawing.Point(6, 60);
-            this.y_label.Name = "y_label";
-            this.y_label.Size = new System.Drawing.Size(38, 13);
-            this.y_label.TabIndex = 20;
-            this.y_label.Text = "Y-Pos:";
-            // 
-            // yPos_textBox
-            // 
-            this.yPos_textBox.Location = new System.Drawing.Point(50, 57);
-            this.yPos_textBox.Name = "yPos_textBox";
-            this.yPos_textBox.Size = new System.Drawing.Size(45, 20);
-            this.yPos_textBox.TabIndex = 21;
-            this.yPos_textBox.Text = "0";
-            // 
-            // XYPos_groupBox
-            // 
-            this.XYPos_groupBox.Controls.Add(this.y_label);
-            this.XYPos_groupBox.Controls.Add(this.xPos_textBox);
-            this.XYPos_groupBox.Controls.Add(this.yPos_textBox);
-            this.XYPos_groupBox.Controls.Add(this.x_label);
-            this.XYPos_groupBox.Location = new System.Drawing.Point(15, 214);
-            this.XYPos_groupBox.Name = "XYPos_groupBox";
-            this.XYPos_groupBox.Size = new System.Drawing.Size(271, 100);
-            this.XYPos_groupBox.TabIndex = 4;
-            this.XYPos_groupBox.TabStop = false;
-            this.XYPos_groupBox.Text = "XY-Position";
+            this.keyPressStop_radioButton.AutoSize = true;
+            this.keyPressStop_radioButton.Location = new System.Drawing.Point(9, 63);
+            this.keyPressStop_radioButton.Name = "keyPressStop_radioButton";
+            this.keyPressStop_radioButton.Size = new System.Drawing.Size(137, 17);
+            this.keyPressStop_radioButton.TabIndex = 19;
+            this.keyPressStop_radioButton.TabStop = true;
+            this.keyPressStop_radioButton.Text = "Stop Until: (S - Pressed)";
+            this.keyPressStop_radioButton.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -317,13 +344,14 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.addEdit_groupBox.ResumeLayout(false);
-            this.addEdit_groupBox.PerformLayout();
+            this.XYPos_groupBox.ResumeLayout(false);
+            this.XYPos_groupBox.PerformLayout();
             this.delay_groupBox.ResumeLayout(false);
             this.delay_groupBox.PerformLayout();
             this.clickOptions_groupBox.ResumeLayout(false);
             this.clickOptions_groupBox.PerformLayout();
-            this.XYPos_groupBox.ResumeLayout(false);
-            this.XYPos_groupBox.PerformLayout();
+            this.repeatOption_groupBox.ResumeLayout(false);
+            this.repeatOption_groupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -347,13 +375,15 @@
         private System.Windows.Forms.GroupBox clickOptions_groupBox;
         private System.Windows.Forms.Label mouseBtn_label;
         private System.Windows.Forms.ComboBox mouseBtn_comboBox;
-        private System.Windows.Forms.Label repeatCount_label;
         private System.Windows.Forms.TextBox repeatCount_textBox;
         private System.Windows.Forms.GroupBox XYPos_groupBox;
         private System.Windows.Forms.Label y_label;
         private System.Windows.Forms.TextBox xPos_textBox;
         private System.Windows.Forms.TextBox yPos_textBox;
         private System.Windows.Forms.Label x_label;
+        private System.Windows.Forms.GroupBox repeatOption_groupBox;
+        private System.Windows.Forms.RadioButton keyPressStop_radioButton;
+        private System.Windows.Forms.RadioButton repeatCount_radioButton;
     }
 }
 

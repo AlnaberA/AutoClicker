@@ -56,9 +56,6 @@ namespace AutoClicker
             }*/
             if (e.KeyCode == Keys.Z)
             {
-                // xPos_textBox.Text = "test";//e.Location.X + ":" + e.Location.Y;
-
-
                 // Set the Current cursor, move the cursor's Position,
                 // and set its clipping rectangle to the form. 
                 /*
