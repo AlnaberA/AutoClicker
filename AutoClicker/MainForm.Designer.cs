@@ -49,11 +49,11 @@
             this.clickOptions_groupBox = new System.Windows.Forms.GroupBox();
             this.mouseBtn_label = new System.Windows.Forms.Label();
             this.mouseBtn_comboBox = new System.Windows.Forms.ComboBox();
-            this.start_button = new System.Windows.Forms.Button();
-            this.stop_button = new System.Windows.Forms.Button();
+            this.run_button = new System.Windows.Forms.Button();
             this.repeatOption_groupBox = new System.Windows.Forms.GroupBox();
             this.repeatCount_radioButton = new System.Windows.Forms.RadioButton();
             this.keyPressStop_radioButton = new System.Windows.Forms.RadioButton();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.addEdit_groupBox.SuspendLayout();
             this.XYPos_groupBox.SuspendLayout();
             this.delay_groupBox.SuspendLayout();
@@ -77,6 +77,7 @@
             // 
             // XYPos_groupBox
             // 
+            this.XYPos_groupBox.Controls.Add(this.richTextBox1);
             this.XYPos_groupBox.Controls.Add(this.y_label);
             this.XYPos_groupBox.Controls.Add(this.xPos_textBox);
             this.XYPos_groupBox.Controls.Add(this.yPos_textBox);
@@ -277,23 +278,14 @@
             this.mouseBtn_comboBox.Size = new System.Drawing.Size(167, 21);
             this.mouseBtn_comboBox.TabIndex = 0;
             // 
-            // start_button
+            // run_button
             // 
-            this.start_button.Location = new System.Drawing.Point(713, 389);
-            this.start_button.Name = "start_button";
-            this.start_button.Size = new System.Drawing.Size(75, 23);
-            this.start_button.TabIndex = 1;
-            this.start_button.Text = "Start";
-            this.start_button.UseVisualStyleBackColor = true;
-            // 
-            // stop_button
-            // 
-            this.stop_button.Location = new System.Drawing.Point(713, 418);
-            this.stop_button.Name = "stop_button";
-            this.stop_button.Size = new System.Drawing.Size(75, 23);
-            this.stop_button.TabIndex = 3;
-            this.stop_button.Text = "Stop";
-            this.stop_button.UseVisualStyleBackColor = true;
+            this.run_button.Location = new System.Drawing.Point(713, 415);
+            this.run_button.Name = "run_button";
+            this.run_button.Size = new System.Drawing.Size(75, 23);
+            this.run_button.TabIndex = 1;
+            this.run_button.Text = "RUN";
+            this.run_button.UseVisualStyleBackColor = true;
             // 
             // repeatOption_groupBox
             // 
@@ -310,6 +302,7 @@
             // repeatCount_radioButton
             // 
             this.repeatCount_radioButton.AutoSize = true;
+            this.repeatCount_radioButton.Checked = true;
             this.repeatCount_radioButton.Location = new System.Drawing.Point(9, 28);
             this.repeatCount_radioButton.Name = "repeatCount_radioButton";
             this.repeatCount_radioButton.Size = new System.Drawing.Size(94, 17);
@@ -317,6 +310,7 @@
             this.repeatCount_radioButton.TabStop = true;
             this.repeatCount_radioButton.Text = "Repeat Count:";
             this.repeatCount_radioButton.UseVisualStyleBackColor = true;
+            this.repeatCount_radioButton.CheckedChanged += new System.EventHandler(this.repeatCount_radioButton_CheckedChanged);
             // 
             // keyPressStop_radioButton
             // 
@@ -325,17 +319,25 @@
             this.keyPressStop_radioButton.Name = "keyPressStop_radioButton";
             this.keyPressStop_radioButton.Size = new System.Drawing.Size(137, 17);
             this.keyPressStop_radioButton.TabIndex = 19;
-            this.keyPressStop_radioButton.TabStop = true;
             this.keyPressStop_radioButton.Text = "Stop Until: (S - Pressed)";
             this.keyPressStop_radioButton.UseVisualStyleBackColor = true;
+            this.keyPressStop_radioButton.CheckedChanged += new System.EventHandler(this.keyPressStop_radioButton_CheckedChanged);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(124, 26);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(130, 51);
+            this.richTextBox1.TabIndex = 22;
+            this.richTextBox1.Text = "Press Z to get the current cursor position.";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.stop_button);
-            this.Controls.Add(this.start_button);
+            this.Controls.Add(this.run_button);
             this.Controls.Add(this.addEdit_groupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -368,8 +370,7 @@
         private System.Windows.Forms.TextBox end_textBox;
         private System.Windows.Forms.RadioButton setTimeRand_radioButton;
         private System.Windows.Forms.RadioButton setTimeDefault_radioButton;
-        private System.Windows.Forms.Button start_button;
-        private System.Windows.Forms.Button stop_button;
+        private System.Windows.Forms.Button run_button;
         private System.Windows.Forms.Button add_button;
         private System.Windows.Forms.GroupBox delay_groupBox;
         private System.Windows.Forms.GroupBox clickOptions_groupBox;
@@ -384,6 +385,7 @@
         private System.Windows.Forms.GroupBox repeatOption_groupBox;
         private System.Windows.Forms.RadioButton keyPressStop_radioButton;
         private System.Windows.Forms.RadioButton repeatCount_radioButton;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 

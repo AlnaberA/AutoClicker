@@ -71,5 +71,21 @@ namespace AutoClicker
             
 
         }
+
+        private void repeatCount_radioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (repeatCount_radioButton.Enabled == true)
+            {
+                repeatCount_textBox.Enabled = true;
+            }
+        }
+
+        private void keyPressStop_radioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (keyPressStop_radioButton.Enabled == true)
+            {
+                repeatCount_textBox.Enabled = false;
+            }
+        }
     }
 }
