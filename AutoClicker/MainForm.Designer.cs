@@ -29,12 +29,16 @@
         private void InitializeComponent()
         {
             this.addEdit_groupBox = new System.Windows.Forms.GroupBox();
+            this.repeatOption_groupBox = new System.Windows.Forms.GroupBox();
+            this.keyPressStop_radioButton = new System.Windows.Forms.RadioButton();
+            this.repeatCount_radioButton = new System.Windows.Forms.RadioButton();
+            this.repeatCount_textBox = new System.Windows.Forms.TextBox();
             this.XYPos_groupBox = new System.Windows.Forms.GroupBox();
+            this.info1_richTextBox = new System.Windows.Forms.RichTextBox();
             this.y_label = new System.Windows.Forms.Label();
             this.xPos_textBox = new System.Windows.Forms.TextBox();
             this.yPos_textBox = new System.Windows.Forms.TextBox();
             this.x_label = new System.Windows.Forms.Label();
-            this.repeatCount_textBox = new System.Windows.Forms.TextBox();
             this.delay_groupBox = new System.Windows.Forms.GroupBox();
             this.setTimeDefault_radioButton = new System.Windows.Forms.RadioButton();
             this.milliseconds_textBox = new System.Windows.Forms.TextBox();
@@ -49,16 +53,20 @@
             this.clickOptions_groupBox = new System.Windows.Forms.GroupBox();
             this.mouseBtn_label = new System.Windows.Forms.Label();
             this.mouseBtn_comboBox = new System.Windows.Forms.ComboBox();
-            this.repeatOption_groupBox = new System.Windows.Forms.GroupBox();
-            this.repeatCount_radioButton = new System.Windows.Forms.RadioButton();
-            this.keyPressStop_radioButton = new System.Windows.Forms.RadioButton();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.run_button = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DELAY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CLICKOPTION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.XYPOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.REPEAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.info2_richTextBox = new System.Windows.Forms.RichTextBox();
             this.addEdit_groupBox.SuspendLayout();
+            this.repeatOption_groupBox.SuspendLayout();
             this.XYPos_groupBox.SuspendLayout();
             this.delay_groupBox.SuspendLayout();
             this.clickOptions_groupBox.SuspendLayout();
-            this.repeatOption_groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // addEdit_groupBox
@@ -75,9 +83,53 @@
             this.addEdit_groupBox.TabStop = false;
             this.addEdit_groupBox.Text = "Add/Edit Mouse Click";
             // 
+            // repeatOption_groupBox
+            // 
+            this.repeatOption_groupBox.Controls.Add(this.keyPressStop_radioButton);
+            this.repeatOption_groupBox.Controls.Add(this.repeatCount_radioButton);
+            this.repeatOption_groupBox.Controls.Add(this.repeatCount_textBox);
+            this.repeatOption_groupBox.Location = new System.Drawing.Point(15, 320);
+            this.repeatOption_groupBox.Name = "repeatOption_groupBox";
+            this.repeatOption_groupBox.Size = new System.Drawing.Size(271, 100);
+            this.repeatOption_groupBox.TabIndex = 4;
+            this.repeatOption_groupBox.TabStop = false;
+            this.repeatOption_groupBox.Text = "Repeat Option";
+            // 
+            // keyPressStop_radioButton
+            // 
+            this.keyPressStop_radioButton.AutoSize = true;
+            this.keyPressStop_radioButton.Location = new System.Drawing.Point(9, 63);
+            this.keyPressStop_radioButton.Name = "keyPressStop_radioButton";
+            this.keyPressStop_radioButton.Size = new System.Drawing.Size(137, 17);
+            this.keyPressStop_radioButton.TabIndex = 19;
+            this.keyPressStop_radioButton.Text = "Stop Until: (S - Pressed)";
+            this.keyPressStop_radioButton.UseVisualStyleBackColor = true;
+            this.keyPressStop_radioButton.CheckedChanged += new System.EventHandler(this.keyPressStop_radioButton_CheckedChanged);
+            // 
+            // repeatCount_radioButton
+            // 
+            this.repeatCount_radioButton.AutoSize = true;
+            this.repeatCount_radioButton.Checked = true;
+            this.repeatCount_radioButton.Location = new System.Drawing.Point(9, 28);
+            this.repeatCount_radioButton.Name = "repeatCount_radioButton";
+            this.repeatCount_radioButton.Size = new System.Drawing.Size(94, 17);
+            this.repeatCount_radioButton.TabIndex = 18;
+            this.repeatCount_radioButton.TabStop = true;
+            this.repeatCount_radioButton.Text = "Repeat Count:";
+            this.repeatCount_radioButton.UseVisualStyleBackColor = true;
+            this.repeatCount_radioButton.CheckedChanged += new System.EventHandler(this.repeatCount_radioButton_CheckedChanged);
+            // 
+            // repeatCount_textBox
+            // 
+            this.repeatCount_textBox.Location = new System.Drawing.Point(109, 28);
+            this.repeatCount_textBox.Name = "repeatCount_textBox";
+            this.repeatCount_textBox.Size = new System.Drawing.Size(60, 20);
+            this.repeatCount_textBox.TabIndex = 16;
+            this.repeatCount_textBox.Text = "0";
+            // 
             // XYPos_groupBox
             // 
-            this.XYPos_groupBox.Controls.Add(this.richTextBox1);
+            this.XYPos_groupBox.Controls.Add(this.info1_richTextBox);
             this.XYPos_groupBox.Controls.Add(this.y_label);
             this.XYPos_groupBox.Controls.Add(this.xPos_textBox);
             this.XYPos_groupBox.Controls.Add(this.yPos_textBox);
@@ -88,6 +140,15 @@
             this.XYPos_groupBox.TabIndex = 4;
             this.XYPos_groupBox.TabStop = false;
             this.XYPos_groupBox.Text = "XY-Position";
+            // 
+            // info1_richTextBox
+            // 
+            this.info1_richTextBox.Location = new System.Drawing.Point(124, 26);
+            this.info1_richTextBox.Name = "info1_richTextBox";
+            this.info1_richTextBox.ReadOnly = true;
+            this.info1_richTextBox.Size = new System.Drawing.Size(130, 51);
+            this.info1_richTextBox.TabIndex = 22;
+            this.info1_richTextBox.Text = "Press Z to get the current cursor position.";
             // 
             // y_label
             // 
@@ -122,14 +183,6 @@
             this.x_label.Size = new System.Drawing.Size(38, 13);
             this.x_label.TabIndex = 18;
             this.x_label.Text = "X-Pos:";
-            // 
-            // repeatCount_textBox
-            // 
-            this.repeatCount_textBox.Location = new System.Drawing.Point(109, 28);
-            this.repeatCount_textBox.Name = "repeatCount_textBox";
-            this.repeatCount_textBox.Size = new System.Drawing.Size(60, 20);
-            this.repeatCount_textBox.TabIndex = 16;
-            this.repeatCount_textBox.Text = "0";
             // 
             // delay_groupBox
             // 
@@ -278,67 +331,78 @@
             this.mouseBtn_comboBox.Size = new System.Drawing.Size(167, 21);
             this.mouseBtn_comboBox.TabIndex = 0;
             // 
-            // repeatOption_groupBox
-            // 
-            this.repeatOption_groupBox.Controls.Add(this.keyPressStop_radioButton);
-            this.repeatOption_groupBox.Controls.Add(this.repeatCount_radioButton);
-            this.repeatOption_groupBox.Controls.Add(this.repeatCount_textBox);
-            this.repeatOption_groupBox.Location = new System.Drawing.Point(15, 320);
-            this.repeatOption_groupBox.Name = "repeatOption_groupBox";
-            this.repeatOption_groupBox.Size = new System.Drawing.Size(271, 100);
-            this.repeatOption_groupBox.TabIndex = 4;
-            this.repeatOption_groupBox.TabStop = false;
-            this.repeatOption_groupBox.Text = "Repeat Option";
-            // 
-            // repeatCount_radioButton
-            // 
-            this.repeatCount_radioButton.AutoSize = true;
-            this.repeatCount_radioButton.Checked = true;
-            this.repeatCount_radioButton.Location = new System.Drawing.Point(9, 28);
-            this.repeatCount_radioButton.Name = "repeatCount_radioButton";
-            this.repeatCount_radioButton.Size = new System.Drawing.Size(94, 17);
-            this.repeatCount_radioButton.TabIndex = 18;
-            this.repeatCount_radioButton.TabStop = true;
-            this.repeatCount_radioButton.Text = "Repeat Count:";
-            this.repeatCount_radioButton.UseVisualStyleBackColor = true;
-            this.repeatCount_radioButton.CheckedChanged += new System.EventHandler(this.repeatCount_radioButton_CheckedChanged);
-            // 
-            // keyPressStop_radioButton
-            // 
-            this.keyPressStop_radioButton.AutoSize = true;
-            this.keyPressStop_radioButton.Location = new System.Drawing.Point(9, 63);
-            this.keyPressStop_radioButton.Name = "keyPressStop_radioButton";
-            this.keyPressStop_radioButton.Size = new System.Drawing.Size(137, 17);
-            this.keyPressStop_radioButton.TabIndex = 19;
-            this.keyPressStop_radioButton.Text = "Stop Until: (S - Pressed)";
-            this.keyPressStop_radioButton.UseVisualStyleBackColor = true;
-            this.keyPressStop_radioButton.CheckedChanged += new System.EventHandler(this.keyPressStop_radioButton_CheckedChanged);
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(124, 26);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(130, 51);
-            this.richTextBox1.TabIndex = 22;
-            this.richTextBox1.Text = "Press Z to get the current cursor position.";
-            // 
             // run_button
             // 
             this.run_button.Image = global::AutoClicker.Properties.Resources.Play_icon1;
             this.run_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.run_button.Location = new System.Drawing.Point(676, 395);
+            this.run_button.Location = new System.Drawing.Point(918, 393);
             this.run_button.Name = "run_button";
             this.run_button.Size = new System.Drawing.Size(112, 45);
             this.run_button.TabIndex = 1;
             this.run_button.Text = "Run";
             this.run_button.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.DELAY,
+            this.CLICKOPTION,
+            this.XYPOS,
+            this.REPEAT});
+            this.dataGridView1.Location = new System.Drawing.Point(458, 21);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(546, 150);
+            this.dataGridView1.TabIndex = 2;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // DELAY
+            // 
+            this.DELAY.HeaderText = "DELAY";
+            this.DELAY.Name = "DELAY";
+            this.DELAY.ReadOnly = true;
+            // 
+            // CLICKOPTION
+            // 
+            this.CLICKOPTION.HeaderText = "CLICK_OPTION";
+            this.CLICKOPTION.Name = "CLICKOPTION";
+            this.CLICKOPTION.ReadOnly = true;
+            // 
+            // XYPOS
+            // 
+            this.XYPOS.HeaderText = "X_Y_POSITION";
+            this.XYPOS.Name = "XYPOS";
+            this.XYPOS.ReadOnly = true;
+            // 
+            // REPEAT
+            // 
+            this.REPEAT.HeaderText = "REPEAT";
+            this.REPEAT.Name = "REPEAT";
+            this.REPEAT.ReadOnly = true;
+            // 
+            // info2_richTextBox
+            // 
+            this.info2_richTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.info2_richTextBox.Location = new System.Drawing.Point(458, 182);
+            this.info2_richTextBox.Name = "info2_richTextBox";
+            this.info2_richTextBox.ReadOnly = true;
+            this.info2_richTextBox.Size = new System.Drawing.Size(130, 51);
+            this.info2_richTextBox.TabIndex = 23;
+            this.info2_richTextBox.Text = "MORE FEATURES COMING SOON.";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1042, 450);
+            this.Controls.Add(this.info2_richTextBox);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.run_button);
             this.Controls.Add(this.addEdit_groupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -348,14 +412,15 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.addEdit_groupBox.ResumeLayout(false);
+            this.repeatOption_groupBox.ResumeLayout(false);
+            this.repeatOption_groupBox.PerformLayout();
             this.XYPos_groupBox.ResumeLayout(false);
             this.XYPos_groupBox.PerformLayout();
             this.delay_groupBox.ResumeLayout(false);
             this.delay_groupBox.PerformLayout();
             this.clickOptions_groupBox.ResumeLayout(false);
             this.clickOptions_groupBox.PerformLayout();
-            this.repeatOption_groupBox.ResumeLayout(false);
-            this.repeatOption_groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -387,7 +452,14 @@
         private System.Windows.Forms.GroupBox repeatOption_groupBox;
         private System.Windows.Forms.RadioButton keyPressStop_radioButton;
         private System.Windows.Forms.RadioButton repeatCount_radioButton;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox info1_richTextBox;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DELAY;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CLICKOPTION;
+        private System.Windows.Forms.DataGridViewTextBoxColumn XYPOS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn REPEAT;
+        private System.Windows.Forms.RichTextBox info2_richTextBox;
     }
 }
 
