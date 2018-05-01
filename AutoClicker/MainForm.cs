@@ -87,5 +87,10 @@ namespace AutoClicker
                 repeatCount_textBox.Enabled = false;
             }
         }
+
+        private void add_button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

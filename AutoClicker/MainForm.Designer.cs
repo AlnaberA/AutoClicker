@@ -54,7 +54,7 @@
             this.mouseBtn_label = new System.Windows.Forms.Label();
             this.mouseBtn_comboBox = new System.Windows.Forms.ComboBox();
             this.run_button = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.mouseClicksInfo_dataGridView = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DELAY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CLICKOPTION = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,7 +66,7 @@
             this.XYPos_groupBox.SuspendLayout();
             this.delay_groupBox.SuspendLayout();
             this.clickOptions_groupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mouseClicksInfo_dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // addEdit_groupBox
@@ -296,6 +296,7 @@
             this.add_button.TabIndex = 16;
             this.add_button.Text = "Add";
             this.add_button.UseVisualStyleBackColor = true;
+            this.add_button.Click += new System.EventHandler(this.add_button_Click);
             // 
             // clickOptions_groupBox
             // 
@@ -342,19 +343,19 @@
             this.run_button.Text = "Run";
             this.run_button.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // mouseClicksInfo_dataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.mouseClicksInfo_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.mouseClicksInfo_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.DELAY,
             this.CLICKOPTION,
             this.XYPOS,
             this.REPEAT});
-            this.dataGridView1.Location = new System.Drawing.Point(458, 21);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(546, 150);
-            this.dataGridView1.TabIndex = 2;
+            this.mouseClicksInfo_dataGridView.Location = new System.Drawing.Point(458, 21);
+            this.mouseClicksInfo_dataGridView.Name = "mouseClicksInfo_dataGridView";
+            this.mouseClicksInfo_dataGridView.Size = new System.Drawing.Size(546, 150);
+            this.mouseClicksInfo_dataGridView.TabIndex = 2;
             // 
             // ID
             // 
@@ -402,7 +403,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1042, 450);
             this.Controls.Add(this.info2_richTextBox);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.mouseClicksInfo_dataGridView);
             this.Controls.Add(this.run_button);
             this.Controls.Add(this.addEdit_groupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -420,7 +421,7 @@
             this.delay_groupBox.PerformLayout();
             this.clickOptions_groupBox.ResumeLayout(false);
             this.clickOptions_groupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mouseClicksInfo_dataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -453,7 +454,7 @@
         private System.Windows.Forms.RadioButton keyPressStop_radioButton;
         private System.Windows.Forms.RadioButton repeatCount_radioButton;
         private System.Windows.Forms.RichTextBox info1_richTextBox;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView mouseClicksInfo_dataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn DELAY;
         private System.Windows.Forms.DataGridViewTextBoxColumn CLICKOPTION;
