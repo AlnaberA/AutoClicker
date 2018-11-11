@@ -90,7 +90,16 @@ namespace AutoClicker
 
         private void add_button_Click(object sender, EventArgs e)
         {
-
+            DataGridViewRow row = (DataGridViewRow)mouseClicksInfo_dataGridView.Rows[0].Clone();
+            string id = mouseClicksInfo_dataGridView.RowCount.ToString(); //Row Count is the ID - id starts at 1
+            //info2_richTextBox.Text = count;
+            row.Cells[0].Value = id;
+            row.Cells[1].Value = 1;
+            row.Cells[2].Value = 2;
+            row.Cells[3].Value = 3;
+            row.Cells[4].Value = 4;
+            mouseClicksInfo_dataGridView.Rows.Add(row);
+            
         }
     }
 }
