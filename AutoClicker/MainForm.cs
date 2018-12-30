@@ -94,7 +94,18 @@ namespace AutoClicker
             string id = mouseClicksInfo_dataGridView.RowCount.ToString(); //Row Count is the ID - id starts at 1
             //info2_richTextBox.Text = count;
             row.Cells[0].Value = id;
-            row.Cells[1].Value = 1;
+
+            if (setTimeDefault_radioButton.Checked)
+            {
+                row.Cells[1].Value = 100;
+            }
+            else
+            {
+                row.Cells[1].Value = 200;
+            }
+            
+
+
             row.Cells[2].Value = 2;
             row.Cells[3].Value = 3;
             row.Cells[4].Value = 4;
