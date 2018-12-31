@@ -94,23 +94,19 @@ namespace AutoClicker
             string id = mouseClicksInfo_dataGridView.RowCount.ToString(); //Row Count is the ID - id starts at 1
             //info2_richTextBox.Text = count;
             row.Cells[0].Value = id;
-
-            if (setTimeDefault_radioButton.Checked)
-            {
-                row.Cells[1].Value = 100;
-            }
-            else
-            {
-                row.Cells[1].Value = 200;
-            }
-            
-
-
-            row.Cells[2].Value = 2;
-            row.Cells[3].Value = 3;
-            row.Cells[4].Value = 4;
+            row.Cells[1].Value = mouseBtn_comboBox.Text;
+            row.Cells[2].Value = xPos_textBox.Text;
+            row.Cells[3].Value = yPos_textBox.Text;
+     
             mouseClicksInfo_dataGridView.Rows.Add(row);
             
+        }
+
+        private int generateRandomNumber(int startNumber, int endNumber)
+        {
+            Random rnd = new Random();
+            int number = rnd.Next(startNumber, endNumber); // creates a number between 1 and 12
+            return number;
         }
     }
 }
