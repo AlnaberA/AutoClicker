@@ -35,6 +35,10 @@
             this.xPos_textBox = new System.Windows.Forms.TextBox();
             this.yPos_textBox = new System.Windows.Forms.TextBox();
             this.x_label = new System.Windows.Forms.Label();
+            this.add_button = new System.Windows.Forms.Button();
+            this.clickOptions_groupBox = new System.Windows.Forms.GroupBox();
+            this.mouseBtn_label = new System.Windows.Forms.Label();
+            this.mouseBtn_comboBox = new System.Windows.Forms.ComboBox();
             this.delay_groupBox = new System.Windows.Forms.GroupBox();
             this.setTimeDefault_radioButton = new System.Windows.Forms.RadioButton();
             this.milliseconds_textBox = new System.Windows.Forms.TextBox();
@@ -45,25 +49,21 @@
             this.range_label = new System.Windows.Forms.Label();
             this.start_label = new System.Windows.Forms.Label();
             this.end_textBox = new System.Windows.Forms.TextBox();
-            this.add_button = new System.Windows.Forms.Button();
-            this.clickOptions_groupBox = new System.Windows.Forms.GroupBox();
-            this.mouseBtn_label = new System.Windows.Forms.Label();
-            this.mouseBtn_comboBox = new System.Windows.Forms.ComboBox();
             this.repeatOption_groupBox = new System.Windows.Forms.GroupBox();
             this.keyPressStop_radioButton = new System.Windows.Forms.RadioButton();
             this.repeatCount_radioButton = new System.Windows.Forms.RadioButton();
             this.repeatCount_textBox = new System.Windows.Forms.TextBox();
             this.run_button = new System.Windows.Forms.Button();
             this.mouseClicksInfo_dataGridView = new System.Windows.Forms.DataGridView();
-            this.info2_richTextBox = new System.Windows.Forms.RichTextBox();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CLICKOPTION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.XYPOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Y_POS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.info2_richTextBox = new System.Windows.Forms.RichTextBox();
             this.addEdit_groupBox.SuspendLayout();
             this.XYPos_groupBox.SuspendLayout();
-            this.delay_groupBox.SuspendLayout();
             this.clickOptions_groupBox.SuspendLayout();
+            this.delay_groupBox.SuspendLayout();
             this.repeatOption_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mouseClicksInfo_dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -136,6 +136,50 @@
             this.x_label.Size = new System.Drawing.Size(38, 13);
             this.x_label.TabIndex = 18;
             this.x_label.Text = "X-Pos:";
+            // 
+            // add_button
+            // 
+            this.add_button.Location = new System.Drawing.Point(299, 162);
+            this.add_button.Name = "add_button";
+            this.add_button.Size = new System.Drawing.Size(75, 23);
+            this.add_button.TabIndex = 16;
+            this.add_button.Text = "Add";
+            this.add_button.UseVisualStyleBackColor = true;
+            this.add_button.Click += new System.EventHandler(this.add_button_Click);
+            // 
+            // clickOptions_groupBox
+            // 
+            this.clickOptions_groupBox.Controls.Add(this.mouseBtn_label);
+            this.clickOptions_groupBox.Controls.Add(this.mouseBtn_comboBox);
+            this.clickOptions_groupBox.Location = new System.Drawing.Point(6, 19);
+            this.clickOptions_groupBox.Name = "clickOptions_groupBox";
+            this.clickOptions_groupBox.Size = new System.Drawing.Size(271, 60);
+            this.clickOptions_groupBox.TabIndex = 2;
+            this.clickOptions_groupBox.TabStop = false;
+            this.clickOptions_groupBox.Text = "Click Options";
+            // 
+            // mouseBtn_label
+            // 
+            this.mouseBtn_label.AutoSize = true;
+            this.mouseBtn_label.Location = new System.Drawing.Point(6, 22);
+            this.mouseBtn_label.Name = "mouseBtn_label";
+            this.mouseBtn_label.Size = new System.Drawing.Size(76, 13);
+            this.mouseBtn_label.TabIndex = 1;
+            this.mouseBtn_label.Text = "Mouse Button:";
+            // 
+            // mouseBtn_comboBox
+            // 
+            this.mouseBtn_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.mouseBtn_comboBox.FormattingEnabled = true;
+            this.mouseBtn_comboBox.Items.AddRange(new object[] {
+            "Single Left Click",
+            "Single Right Click",
+            "Double Left Click",
+            "Double Right Click"});
+            this.mouseBtn_comboBox.Location = new System.Drawing.Point(98, 19);
+            this.mouseBtn_comboBox.Name = "mouseBtn_comboBox";
+            this.mouseBtn_comboBox.Size = new System.Drawing.Size(167, 21);
+            this.mouseBtn_comboBox.TabIndex = 0;
             // 
             // delay_groupBox
             // 
@@ -241,50 +285,6 @@
             this.end_textBox.TabIndex = 11;
             this.end_textBox.Text = "0";
             // 
-            // add_button
-            // 
-            this.add_button.Location = new System.Drawing.Point(299, 162);
-            this.add_button.Name = "add_button";
-            this.add_button.Size = new System.Drawing.Size(75, 23);
-            this.add_button.TabIndex = 16;
-            this.add_button.Text = "Add";
-            this.add_button.UseVisualStyleBackColor = true;
-            this.add_button.Click += new System.EventHandler(this.add_button_Click);
-            // 
-            // clickOptions_groupBox
-            // 
-            this.clickOptions_groupBox.Controls.Add(this.mouseBtn_label);
-            this.clickOptions_groupBox.Controls.Add(this.mouseBtn_comboBox);
-            this.clickOptions_groupBox.Location = new System.Drawing.Point(6, 19);
-            this.clickOptions_groupBox.Name = "clickOptions_groupBox";
-            this.clickOptions_groupBox.Size = new System.Drawing.Size(271, 60);
-            this.clickOptions_groupBox.TabIndex = 2;
-            this.clickOptions_groupBox.TabStop = false;
-            this.clickOptions_groupBox.Text = "Click Options";
-            // 
-            // mouseBtn_label
-            // 
-            this.mouseBtn_label.AutoSize = true;
-            this.mouseBtn_label.Location = new System.Drawing.Point(6, 22);
-            this.mouseBtn_label.Name = "mouseBtn_label";
-            this.mouseBtn_label.Size = new System.Drawing.Size(76, 13);
-            this.mouseBtn_label.TabIndex = 1;
-            this.mouseBtn_label.Text = "Mouse Button:";
-            // 
-            // mouseBtn_comboBox
-            // 
-            this.mouseBtn_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.mouseBtn_comboBox.FormattingEnabled = true;
-            this.mouseBtn_comboBox.Items.AddRange(new object[] {
-            "Single Left Click",
-            "Single Right Click",
-            "Double Left Click",
-            "Double Right Click"});
-            this.mouseBtn_comboBox.Location = new System.Drawing.Point(98, 19);
-            this.mouseBtn_comboBox.Name = "mouseBtn_comboBox";
-            this.mouseBtn_comboBox.Size = new System.Drawing.Size(167, 21);
-            this.mouseBtn_comboBox.TabIndex = 0;
-            // 
             // repeatOption_groupBox
             // 
             this.repeatOption_groupBox.Controls.Add(this.keyPressStop_radioButton);
@@ -339,6 +339,7 @@
             this.run_button.TabIndex = 1;
             this.run_button.Text = "Run";
             this.run_button.UseVisualStyleBackColor = true;
+            this.run_button.Click += new System.EventHandler(this.run_button_Click);
             // 
             // mouseClicksInfo_dataGridView
             // 
@@ -352,16 +353,6 @@
             this.mouseClicksInfo_dataGridView.Name = "mouseClicksInfo_dataGridView";
             this.mouseClicksInfo_dataGridView.Size = new System.Drawing.Size(444, 199);
             this.mouseClicksInfo_dataGridView.TabIndex = 2;
-            // 
-            // info2_richTextBox
-            // 
-            this.info2_richTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.info2_richTextBox.Location = new System.Drawing.Point(458, 226);
-            this.info2_richTextBox.Name = "info2_richTextBox";
-            this.info2_richTextBox.ReadOnly = true;
-            this.info2_richTextBox.Size = new System.Drawing.Size(130, 51);
-            this.info2_richTextBox.TabIndex = 23;
-            this.info2_richTextBox.Text = "MORE FEATURES COMING SOON.";
             // 
             // ID
             // 
@@ -386,6 +377,16 @@
             this.Y_POS.HeaderText = "Y_POS";
             this.Y_POS.Name = "Y_POS";
             // 
+            // info2_richTextBox
+            // 
+            this.info2_richTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.info2_richTextBox.Location = new System.Drawing.Point(458, 226);
+            this.info2_richTextBox.Name = "info2_richTextBox";
+            this.info2_richTextBox.ReadOnly = true;
+            this.info2_richTextBox.Size = new System.Drawing.Size(130, 51);
+            this.info2_richTextBox.TabIndex = 23;
+            this.info2_richTextBox.Text = "MORE FEATURES COMING SOON.";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,10 +407,10 @@
             this.addEdit_groupBox.ResumeLayout(false);
             this.XYPos_groupBox.ResumeLayout(false);
             this.XYPos_groupBox.PerformLayout();
-            this.delay_groupBox.ResumeLayout(false);
-            this.delay_groupBox.PerformLayout();
             this.clickOptions_groupBox.ResumeLayout(false);
             this.clickOptions_groupBox.PerformLayout();
+            this.delay_groupBox.ResumeLayout(false);
+            this.delay_groupBox.PerformLayout();
             this.repeatOption_groupBox.ResumeLayout(false);
             this.repeatOption_groupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mouseClicksInfo_dataGridView)).EndInit();
