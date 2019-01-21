@@ -107,9 +107,6 @@ namespace AutoClicker
             // Set the Current cursor, move the cursor's Position
             foreach (DataGridViewRow row in mouseClicksInfo_dataGridView.Rows)
             {
-
-                
-
                 if (setTimeDefault_radioButton.Enabled == true)
                 {
                     System.Threading.Thread.Sleep(Convert.ToInt16(milliseconds_textBox.Text));
@@ -120,6 +117,9 @@ namespace AutoClicker
                 }
 
                 Mouse.SetCursorPosition(Convert.ToInt16(row.Cells[2].Value), Convert.ToInt16(row.Cells[3].Value));
+
+                Mouse.MouseEvent(Mouse.MouseEventFlags.LeftDown);
+                Mouse.MouseEvent(Mouse.MouseEventFlags.LeftUp);
                 // Cursor.Position = new Point(Convert.ToInt16(row.Cells[2].Value), Convert.ToInt16(row.Cells[3].Value));
             }
         }
