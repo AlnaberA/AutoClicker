@@ -18,6 +18,19 @@ namespace AutoClicker
             RightUp = 0x00000010
         }
 
+        [StructLayout(LayoutKind.Sequential)]
+        public struct MousePoint
+        {
+            public int X;
+            public int Y;
+
+            public MousePoint(int x, int y)
+            {
+                X = x;
+                Y = y;
+            }
+        }
+
         [DllImport("user32.dll", EntryPoint = "SetCursorPos")]
         [return: MarshalAs(UnmanagedType.Bool)]
         private static extern bool SetCursorPos(int x, int y);
@@ -58,19 +71,6 @@ namespace AutoClicker
                  0,
                  0)
                 ;
-        }
-
-        [StructLayout(LayoutKind.Sequential)]
-        public struct MousePoint
-        {
-            public int X;
-            public int Y;
-
-            public MousePoint(int x, int y)
-            {
-                X = x;
-                Y = y;
-            }
         }
     }
 }

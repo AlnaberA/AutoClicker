@@ -48,22 +48,8 @@ namespace AutoClicker
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
-            //ctrl+z runs this command
-            /*
-            if (e.Control == true && e.KeyCode == Keys.Z)
+            if (e.KeyCode == Keys.F7)
             {
-                xPos_textBox.Text = "test";
-            }*/
-            if (e.KeyCode == Keys.Z)
-            {
-                // Set the Current cursor, move the cursor's Position,
-                // and set its clipping rectangle to the form. 
-                /*
-                this.Cursor = new Cursor(Cursor.Current.Handle);
-                Cursor.Position = new Point(Cursor.Position.X - 50, Cursor.Position.Y - 50);
-                Cursor.Clip = new Rectangle(this.Location, this.Size);
-                */
-
                 this.Cursor = new Cursor(Cursor.Current.Handle);
                 xPos_textBox.Text = Cursor.Position.X.ToString();
                 yPos_textBox.Text = Cursor.Position.Y.ToString();
@@ -92,14 +78,12 @@ namespace AutoClicker
         {
             DataGridViewRow row = (DataGridViewRow)mouseClicksInfo_dataGridView.Rows[0].Clone();
             string id = mouseClicksInfo_dataGridView.RowCount.ToString(); //Row Count is the ID - id starts at 1
-            //info2_richTextBox.Text = count;
             row.Cells[0].Value = id;
             row.Cells[1].Value = mouseBtn_comboBox.Text;
             row.Cells[2].Value = xPos_textBox.Text;
             row.Cells[3].Value = yPos_textBox.Text;
      
             mouseClicksInfo_dataGridView.Rows.Add(row);
-            
         }
 
         private void run_button_Click(object sender, EventArgs e)
@@ -107,9 +91,18 @@ namespace AutoClicker
             // Set the Current cursor, move the cursor's Position
             foreach (DataGridViewRow row in mouseClicksInfo_dataGridView.Rows)
             {
+                //Ignore last row
+                if (row.IsNewRow)
+                {
+                    continue;
+                }
+
                 if (setTimeDefault_radioButton.Enabled == true)
                 {
-                    System.Threading.Thread.Sleep(Convert.ToInt16(milliseconds_textBox.Text));
+                    if (Convert.ToInt16(milliseconds_textBox.Text) != 0)
+                    {
+                        System.Threading.Thread.Sleep(Convert.ToInt16(milliseconds_textBox.Text));
+                    }
                 }
                 else if (setTimeRand_radioButton.Enabled == true)
                 {
@@ -120,14 +113,13 @@ namespace AutoClicker
 
                 Mouse.MouseEvent(Mouse.MouseEventFlags.LeftDown);
                 Mouse.MouseEvent(Mouse.MouseEventFlags.LeftUp);
-                // Cursor.Position = new Point(Convert.ToInt16(row.Cells[2].Value), Convert.ToInt16(row.Cells[3].Value));
             }
         }
 
         private int RandomNumber(int startNumber, int endNumber)
         {
             Random rnd = new Random();
-            int number = rnd.Next(startNumber, endNumber); // creates a number between 1 and 12
+            int number = rnd.Next(startNumber, endNumber); // creates a number between start and end
             return number;
         }
     }

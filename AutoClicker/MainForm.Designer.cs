@@ -101,7 +101,7 @@
             this.info1_richTextBox.ReadOnly = true;
             this.info1_richTextBox.Size = new System.Drawing.Size(130, 51);
             this.info1_richTextBox.TabIndex = 22;
-            this.info1_richTextBox.Text = "Press Z to get the current cursor position.";
+            this.info1_richTextBox.Text = "Press F7 to get the current cursor position.";
             // 
             // y_label
             // 
