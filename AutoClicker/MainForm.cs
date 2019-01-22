@@ -88,6 +88,8 @@ namespace AutoClicker
 
         private void run_button_Click(object sender, EventArgs e)
         {
+
+
             // Set the Current cursor, move the cursor's Position
             foreach (DataGridViewRow row in mouseClicksInfo_dataGridView.Rows)
             {
@@ -111,8 +113,16 @@ namespace AutoClicker
 
                 Mouse.SetCursorPosition(Convert.ToInt16(row.Cells[2].Value), Convert.ToInt16(row.Cells[3].Value));
 
-                Mouse.MouseEvent(Mouse.MouseEventFlags.LeftDown);
-                Mouse.MouseEvent(Mouse.MouseEventFlags.LeftUp);
+                if (row.Cells[1].Value.ToString() == "Single Left Click")
+                {
+                    Mouse.MouseEvent(Mouse.MouseEventFlags.LeftDown);
+                    Mouse.MouseEvent(Mouse.MouseEventFlags.LeftUp);
+                }
+                else if (row.Cells[1].Value.ToString() == "Single Right Click")
+                {
+                    Mouse.MouseEvent(Mouse.MouseEventFlags.RightDown);
+                    Mouse.MouseEvent(Mouse.MouseEventFlags.RightUp);
+                }
             }
         }
 
