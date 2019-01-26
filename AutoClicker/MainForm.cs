@@ -13,20 +13,21 @@ namespace AutoClicker
 {
     public partial class MainForm : Form
     {
-        //https://ourcodeworld.com/articles/read/573/how-to-register-a-single-or-multiple-global-hotkeys-for-a-single-key-in-winforms
         [DllImport("user32.dll")]
         public static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vlc);
 
         private bool flag;
+        BackgroundWorker BackgroundWorker;
 
         public MainForm()
         {
             InitializeComponent();
+
             //Sets default select box items
             mouseBtn_comboBox.SelectedItem = "Single Left Click";
 
-            // 3. Register HotKey
-
+            // https://ourcodeworld.com/articles/read/573/how-to-register-a-single-or-multiple-global-hotkeys-for-a-single-key-in-winforms
+            // Register HotKey
             // Set an unique id to your Hotkey, it will be used to
             // identify which hotkey was pressed in your code to execute something
             int UniqueHotkeyId = 1;
@@ -118,7 +119,7 @@ namespace AutoClicker
      
             mouseClicksInfo_dataGridView.Rows.Add(row);
         }
-        BackgroundWorker BackgroundWorker;
+
         private void run_button_Click(object sender, EventArgs e)
         {
             BackgroundWorker = new BackgroundWorker();
@@ -167,6 +168,12 @@ namespace AutoClicker
                 }
             }
         }
+
+        /*
+         * WindowProc callback function. An application-defined function that processes messages sent to a window. 
+         * A Callback Function is a function that is passed as a parameter to another function, and the callback function is run inside of the function it was passed into.
+         * In computer programming, a callback is executable code that is passed as an argument to other code.
+         */
         protected override void WndProc(ref Message m)
         {
             // 5. Catch when a HotKey is pressed !
