@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoClicker.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace AutoClicker
 {
@@ -25,16 +27,16 @@ namespace AutoClicker
 
             //Sets default select box items
             mouseBtn_comboBox.SelectedItem = "Single Left Click";
-
-            // https://ourcodeworld.com/articles/read/573/how-to-register-a-single-or-multiple-global-hotkeys-for-a-single-key-in-winforms
+            
             // Register HotKey
             // Set an unique id to your Hotkey, it will be used to
             // identify which hotkey was pressed in your code to execute something
             int UniqueHotkeyId = 1;
+
             // Set the Hotkey triggerer the F9 key 
             // Expected an integer value for F9: 0x78, but you can convert the Keys.KEY to its int value
-            // See: https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731(v=vs.85).aspx
             int HotKeyCode = (int)Keys.F9;
+
             // Register the "F9" hotkey
             Boolean F9Registered = RegisterHotKey(
                 this.Handle, UniqueHotkeyId, 0x0000, HotKeyCode
@@ -150,7 +152,8 @@ namespace AutoClicker
                     }
                     else if (setTimeRand_radioButton.Enabled == true)
                     {
-                        System.Threading.Thread.Sleep(RandomNumber(Convert.ToInt16(start_textBox.Text), Convert.ToInt16(end_textBox.Text)));
+                        RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
+                        System.Threading.Thread.Sleep(randomNumberGenerator.RandomNumber(Convert.ToInt16(start_textBox.Text), Convert.ToInt16(end_textBox.Text)));
                     }
 
                     Mouse.SetCursorPosition(Convert.ToInt16(row.Cells[2].Value), Convert.ToInt16(row.Cells[3].Value));
@@ -189,13 +192,6 @@ namespace AutoClicker
                 }
             }
             base.WndProc(ref m);
-        }
-
-        private int RandomNumber(int startNumber, int endNumber)
-        {
-            Random rnd = new Random();
-            int number = rnd.Next(startNumber, endNumber); // creates a number between start and end
-            return number;
         }
     }
 }
