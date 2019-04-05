@@ -304,7 +304,7 @@
             this.keyPressStop_radioButton.Name = "keyPressStop_radioButton";
             this.keyPressStop_radioButton.Size = new System.Drawing.Size(142, 17);
             this.keyPressStop_radioButton.TabIndex = 19;
-            this.keyPressStop_radioButton.Text = "Stop Until: (F6 - Pressed)";
+            this.keyPressStop_radioButton.Text = "Stop Until: (F9 - Pressed)";
             this.keyPressStop_radioButton.UseVisualStyleBackColor = true;
             this.keyPressStop_radioButton.CheckedChanged += new System.EventHandler(this.keyPressStop_radioButton_CheckedChanged);
             // 

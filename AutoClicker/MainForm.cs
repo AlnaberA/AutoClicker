@@ -125,11 +125,11 @@ namespace AutoClicker
         private void run_button_Click(object sender, EventArgs e)
         {
             BackgroundWorker = new BackgroundWorker();
-            BackgroundWorker.DoWork += (obj, ea) => TaskAsync(1);
+            BackgroundWorker.DoWork += (obj, ea) => runAction(1);
             BackgroundWorker.RunWorkerAsync();
         }
 
-        private async void TaskAsync(int times)
+        private void runAction(int times)
         {
             this.flag = true;
             while (this.flag)
@@ -179,7 +179,7 @@ namespace AutoClicker
          */
         protected override void WndProc(ref Message m)
         {
-            // 5. Catch when a HotKey is pressed !
+            // 5. Catch when a HotKey is pressed.
             if (m.Msg == 0x0312)
             {
                 int id = m.WParam.ToInt32();
@@ -187,7 +187,7 @@ namespace AutoClicker
 
                 if (id == 1)
                 {
-                    //MessageBox.Show("F9 Was pressed !");
+                    //MessageBox.Show("F9 pressed.");
                     this.flag = false;
                 }
             }
