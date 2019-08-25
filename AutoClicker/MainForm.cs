@@ -68,6 +68,7 @@ namespace AutoClicker
                 start_textBox.Enabled = false;
                 end_textBox.Enabled = false;
                 milliseconds_textBox.Enabled = true;
+                setTimeDefault_radioButton.Enabled = true;
             }
         }
 
@@ -79,6 +80,7 @@ namespace AutoClicker
                 start_textBox.Enabled = true;
                 end_textBox.Enabled = true;
                 milliseconds_textBox.Enabled = false;
+                setTimeDefault_radioButton.Enabled = false;
             }
         }
 
