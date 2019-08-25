@@ -27,7 +27,14 @@ namespace AutoClicker
 
             //Sets default select box items
             mouseBtn_comboBox.SelectedItem = "Single Left Click";
-            
+
+            setUpHotkey();
+
+            this.flag = false;
+        }
+
+        private void setUpHotkey()
+        {
             // Register HotKey
             // Set an unique id to your Hotkey, it will be used to
             // identify which hotkey was pressed in your code to execute something
@@ -51,8 +58,6 @@ namespace AutoClicker
             {
                 Console.WriteLine("Global Hotkey F9 couldn't be registered !");
             }
-
-            this.flag = false;
         }
 
         private void setTimeDefault_radioButton_CheckedChanged(object sender, EventArgs e)
@@ -183,11 +188,9 @@ namespace AutoClicker
             if (m.Msg == 0x0312)
             {
                 int id = m.WParam.ToInt32();
-                // MessageBox.Show(string.Format("Hotkey #{0} pressed", id));
 
                 if (id == 1)
                 {
-                    //MessageBox.Show("F9 pressed.");
                     this.flag = false;
                 }
             }
