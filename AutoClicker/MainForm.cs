@@ -68,7 +68,6 @@ namespace AutoClicker
                 start_textBox.Enabled = false;
                 end_textBox.Enabled = false;
                 milliseconds_textBox.Enabled = true;
-                setTimeDefault_radioButton.Enabled = true;
             }
         }
 
@@ -80,7 +79,6 @@ namespace AutoClicker
                 start_textBox.Enabled = true;
                 end_textBox.Enabled = true;
                 milliseconds_textBox.Enabled = false;
-                setTimeDefault_radioButton.Enabled = false;
             }
         }
 
@@ -150,14 +148,14 @@ namespace AutoClicker
                         continue;
                     }
 
-                    if (setTimeDefault_radioButton.Enabled == true)
+                    if (milliseconds_textBox.Enabled == true)
                     {
                         if (Convert.ToInt16(milliseconds_textBox.Text) != 0)
                         {
                             System.Threading.Thread.Sleep(Convert.ToInt16(milliseconds_textBox.Text));
                         }
                     }
-                    else if (setTimeRand_radioButton.Enabled == true)
+                    else if (start_textBox.Enabled == true || end_textBox.Enabled == true)
                     {
                         RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
                         System.Threading.Thread.Sleep(randomNumberGenerator.RandomNumber(Convert.ToInt16(start_textBox.Text), Convert.ToInt16(end_textBox.Text)));
@@ -191,8 +189,9 @@ namespace AutoClicker
             {
                 int id = m.WParam.ToInt32();
 
-                if (id == 1)
+                if ((id == 1) && (repeatCount_textBox.Enabled == false))
                 {
+                    MessageBox.Show("Canceling Operation.");
                     this.flag = false;
                 }
             }
