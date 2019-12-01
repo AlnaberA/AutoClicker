@@ -129,9 +129,13 @@ namespace AutoClicker
 
         private void run_button_Click(object sender, EventArgs e)
         {
-            BackgroundWorker = new BackgroundWorker();
-            BackgroundWorker.DoWork += (obj, ea) => runAction(1);
-            BackgroundWorker.RunWorkerAsync();
+            if (repeatCount_textBox.Text == "0" && repeatCount_radioButton.Checked == true) {
+                System.Windows.Forms.MessageBox.Show("Error: cannot start with 0 repeat count. Please check the Repeat Options.", "Something went wrong!");
+            } else {
+                BackgroundWorker = new BackgroundWorker();
+                BackgroundWorker.DoWork += (obj, ea) => runAction(1);
+                BackgroundWorker.RunWorkerAsync();
+            }
         }
 
         private void runAction(int times)
@@ -191,7 +195,6 @@ namespace AutoClicker
 
                 if ((id == 1) && (repeatCount_textBox.Enabled == false))
                 {
-                    MessageBox.Show("Canceling Operation.");
                     this.flag = false;
                 }
             }
